@@ -1,0 +1,14 @@
+* {
+    margin : 0 ;
+}
+li{
+    list-style-type: none;
+}html {
+    background-color: rgb(49,58,99);
+ }
+ a ::after {
+     color: lightblue;
+ }
+ a {
+     color : whitesmoke;
+ }
