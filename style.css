@@ -29,11 +29,16 @@ header, footer {
     max-height:150px;
     max-width: 150px;
 }
-#contact :hover {
+.parts{
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration : 1000ms;
+}
+.parts:hover {
+    transform: scale(1.60);
     color: red;
     text-decoration: underline;
 }
-
 .flex-container {
     font-size: 24px;
     line-height:26px;
@@ -47,7 +52,6 @@ header, footer {
     align-items: center;
     align-content: stretch;
 }
-
 .flex-items:nth-child(1) {
     display: block;
     flex-basis: 50%;
@@ -69,4 +73,21 @@ header, footer {
 .flex-items:nth-child(5) {
     display: block;
     flex-basis: 12%;
+}
+.contain-container{
+    margin:50px;
+    padding:100px;
+}
+.container{
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-auto-columns: 1fr;
+    row-gap:10%;
+    column-gap : 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: center;
 }
