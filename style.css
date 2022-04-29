@@ -4,7 +4,7 @@
 }
 
 li {
-    list-style-type: none;
+    list-style-type: none; /* remove the blck circle before the text */
 }
 
 html {
@@ -12,12 +12,11 @@ html {
 }
 
 a :after {
-    color: lightblue;
+    color: lightblue; /* color after user click*/
 }
 
 a {
     text-decoration: none;
-    color: whitesmoke;
 }
 
 header, footer {
@@ -34,10 +33,9 @@ header, footer {
 .flex-container {
     font-size: 24px;
     line-height: 26px;
-    padding: 10px 0 10px 0;
+    padding: 10px;
     min-height: 50px;
     background-color: rgb(14, 25, 99);
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -75,53 +73,89 @@ header, footer {
     flex-basis: 10%;
 }
 .content-propos {
-    /*background-color: transparent;*/
     max-width: 500px;
     text-align: center;
-
     padding: 100px;
 }
 
 .content-parcours {
-    /*background-color: blue;*/
     max-width: 500px;
     text-align: center;
     padding: 100px;
 }
 
-.content-competences{
-    /*background-color:lightblue;*/
+/* Container for skill bars */
+.container-competences {
+    margin-left: 25%;
+    display: flex;
+    align-items: flex-start;
+}
+
+* {
+    box-sizing: border-box
+}
+
+
+.skills {
+    text-align: center; /* Right-align text */
+    padding-top: 10px; /* Add top padding */
+    padding-bottom: 10px; /* Add bottom padding */
+    background-color: rgb(47, 233, 145);
+    color: black;
+    border-radius: 33px;
+
+}
+
+.html {
+    width: 90%;
+}
+
+/* Green */
+.css {
+    width: 80%;
+}
+
+/* Blue */
+.js {
+    width: 65%;
+}
+
+/* Red */
+.php {
+    width: 60%;
+}
+
+/* Dark Grey */
+
+
+.content-contact {
     max-width: 500px;
     text-align: center;
     padding: 100px;
 }
 
-.content-contact{
-    /*background-color:red;*/
-    max-width: 500px;
-    text-align: center;
-    padding: 100px;
-}
-.form-contact{
+.form-contact {
     margin: 10px;
 }
 
-.content-realisations{
-    /*background-color:yellow;*/
+.content-realisations {
     max-width: 500px;
     text-align: center;
     padding: 100px;
 }
+
 .container {
     justify-content: center;
     align-items: flex-start;
     display: flex;
 }
+
 #btn-confirm {
     color: whitesmoke;
     background-color: #5d90dd;
 }
-footer{
+
+footer {
     min-height: 250px;
-    background-color:#0e1963;
+    background-color: #0e1963;
 }
