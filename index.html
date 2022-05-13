@@ -5,9 +5,7 @@
     <meta name="description" content="Mon portfolio en ligne ">
     <meta name="keywords" content="portfolio, etudiant, developpeur">
     <meta name="author" content="Gabriel PERINO">
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
-    <link rel="canonical" href="https://gabrielperino.com/">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portfolio">
@@ -15,44 +13,52 @@
     <meta property="og:url" content="https://www.gabrielperino.com">
     <meta property="og:site_name" content="Portfolio"
     <meta name="twitter:description" content="Portfolio de Gabriel PERINO contact : perino.contact@gmail.com">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://gabrielperino.com/">
     <title> Accueil </title>
 </head>
 <header class="flex-container">
-    <div class="flex-items">
+    <div class="flex-items__title">
         <h1> Gabriel PERINO</h1>
     </div>
-    <div class="flex-items">
+    <div class="flex-items__parts">
         <a href="#propos">A propos de moi</a>
     </div>
-    <div class="flex-items">
+    <div class="flex-items__parts">
         <a href="#parcours">Mon parcours</a>
     </div>
-    <div class="flex-items">
+    <div class="flex-items__parts">
         <a href="#competences">Mon savoir-faire</a>
     </div>
-    <div class="flex-items">
+    <div class="flex-items__parts">
         <a href="#contact">Me contacter</a>
     </div>
-    <div class="flex-items">
+    <div class="flex-items__parts">
         <a href="#realisations">Mes realisations</a>
     </div>
 </header>
 
 <body>
-    <div class="container">
-        <img id="pdp" src="images/pdp.jpg" alt="photo de profil">
-        <div id="propos" class="content-propos">
-            <h1> Qui suis-je ?</h1>
-            <p>
-                Je suis étudiant en 2e année de BTS Services Informatiques aux Organisations (SIO) option SLAM
-            </p>
-        </div>
+<div class="container-propos">
+    <img id="profile-picture" src="images/pdp.jpg" alt="photo de profil">
+    <div id="propos" class="content-propos">
+        <h1> Qui suis-je ?</h1>
+        <p>
+            Je suis étudiant en 2e année de BTS Services Informatiques aux Organisations (SIO) option SLAM
+        </p>
     </div>
-    <div class="container">
-        <div id="parcours" class="content-parcours">
-        </div>
+</div>
+<div class="container-parcours">
+    <div id="parcours" class="content-parcours">
+        <p>septembre 2018 - juillet 2020</p>
+        <p>Baccalauréat STI2D ITEC</p>
+        <p>Obtention en 2020 de mon Baccalauréat STI2D option ITEC avec mention Bien</p>
+        <p>septembre 2020 - juillet 2022</p>
+        <p>BTS SIO option SLAM</p>
     </div>
-    <div id="competences"></div>
+</div>
+<div id="competences">
     <p>HTML</p>
     <div class="container-competences">
         <div class="skills html">90%</div>
@@ -73,46 +79,69 @@
         <div class="skills php">70%</div>
     </div>
 
-    <p>Symphony</p>
+    <p>Symfony</p>
     <div class="container-competences">
-        <div class="skills symphony">30%</div>
+        <div class="skills symfony">30%</div>
     </div>
     <p>C#</p>
     <div class="container-competences">
         <div class="skills csharp">40%</div>
     </div>
+</div>
+<div class="container-realisation">
+    <div id="realisations" class="content-realisations">
+        <p>
+            Voici quelques-uns de mes projets réalisés lors de mon BTS SIO
+        </p>
+        <div>
+            <a href="sportludique.html"> <img class="img" src="images/sportludique.jpg"  alt="image sportludique"> </a>
+        </div>
+        <p>contexte sportludique</p>
+        <div>
+            <a href="jsbatiment.html"> <img class="img" src="images/js-batiment.png" alt="image js-batiment"></a>
+        </div>
+        <p>tp poo js de première année</p>
+        <div>
+            <a href="remi.html"> <img class="img" src="images/remi.png" alt="image remi-projet"> </a>
+        </div>
+        tp html css de première année
+        <div>
+            <a href="todolist.html"> <img class="img" src="images/to-do list.png" alt="image todolist"></a>
+        </div>
+        <p>projet personnel de todolist en javascript </p>
+    </div>
+</div>
+<div class="container">
+    <div id="contact" class="content-contact">
+        <a href="https://www.linkedin.com/in/gabriel-perino-69a0111b6/?originalSubdomain=fr">
+            <img src="images/linkedin.png" alt="linkedin logo">
+        </a>
+        <a href="https://github.com/coderangel117"><img src="images/github.png" alt="github logo"></a>
+        <a href="mailto:perino.contact@gmail.com?subject=Mail from online portfolio"><img src="images/mail.png"  alt="mail"></a>
+        <div class="form-contact">
+            <form class="form-inline" method="post" class="form-contact">
+                <div class="form-contact__label">
+                    <label for="nom">nom</label>
+                </div>
+                <div class="form-contact__input">
+                    <input id="nom" type="text">
+                </div>
+                <div class="form-contact__label">
+                    <label for="mail">adresse e-mail</label>
+                </div>
+                <div class="form-contact__input">
+                    <input type="text" class="form-contact__input" name="mail" id="mail">
+                </div>
+                <div class="form-contact__label">
+                    <label for="message">votre message</label>
+                </div>
+                <div> <textarea name="message" class="form-contact__textarea" id="message" cols="60" rows="10"></textarea>
+                </div>
+                <button id="btn-confirm"> Confirmer et Envoyer</button>
 
-    <div class="container">
-        <div id="realisations" class="content-realisations">
-            <p>
-                Voici quelques-uns de mes projets réalisés lors de mon BTS SIO ou pendant mon temps libre.
-                <!--Je vous présente ici certaines de mes réalisations-->
-            </p>
-            <div class="img-sportludique">
-                <img src="images/sportludique.jpg" alt="">
-            </div>
+            </form>
         </div>
     </div>
-    <div class="container">
-        <div id="contact" class="content-contact">
-        <a href="https://www.linkedin.com/in/gabriel-perino-69a0111b6/?originalSubdomain=fr">
-            <img src="images/linkedin.png" alt="linkedin logo"></a>
-        <a href="https://github.com/coderangel117"><img src="images/github.png" alt="github logo"></a>
-        <a href="mailto:perino.contact@gmail.com?subject=Mail from online portfolio"><img src="images/mail.png"alt="mail"></a>
-            <p> N'hesitez pas à me contacter je suis disponible sur <a
-                    href="https://www.linkedin.com/in/gabriel-perino-69a0111b6">linkedin</a> mais je suis aussi actif sur
-                <a href="https://www.github.com/coderangel117">github</a> où se trouve tous mes projets </p>
-            <div class="form-contact">
-                <form method="post" class="form-contact">
-                    <label for="nom">nom</label>
-                    <input id="nom" type="text">
-                    <label for="mail">adresse e-mail</label>
-                    <input id="mail" type="text"><br>
-                    <button id="btn-confirm"> Confirmer et Envoyer</button>
-                </form>
-            </div>
-        </div>
-        
 </body>
 
 </html>
