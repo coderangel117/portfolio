@@ -1,5 +1,5 @@
 * {
-    color: whitesmoke;
+    color : #0e1963;
     margin: 0;
 }
 
@@ -7,8 +7,8 @@ li {
     list-style-type: none; /* remove the blck circle before the text */
 }
 
-html {
-    background-color: rgb(49, 58, 99);
+p {
+    font-size:x-large
 }
 
 a :after {
@@ -19,143 +19,155 @@ a {
     text-decoration: none;
 }
 
-header, footer {
-    max-height: 150px;
-    margin-bottom: 0;
-    position: relative;
+header{
+    margin-top: 0;
+    position     : relative;
 }
 
-#pdp {
-    max-height: 150px;
-    max-width: 150px;
+#profile-picture {
+    border-radius: 75%;
+    height   : 414px;
+    width    : 311px;
+    float        : left;
 }
 
+/* flex from header and children */
 .flex-container {
-    font-size: 24px;
-    line-height: 26px;
-    padding: 10px;
-    min-height: 50px;
-    background-color: rgb(14, 25, 99);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: stretch;
+    font-size         : 24px;
+    line-height       : 26px;
+    padding           : 10px;
+    min-height        : 50px;
+    display           : flex;
+    flex-direction    : row;
+    justify-content   : center;
+    align-items       : center;
+    align-content     : stretch;
 }
 
-.flex-items:nth-child(1) {
-    display: block;
+.flex-items__title{/* "Gabriel PERINO" */
+    display   : block;
     flex-basis: 50%;
 }
 
-.flex-items:nth-child(2) {
-    display: block;
-    flex-basis: 10%;
+.flex-items__parts {/* different links   */
+    display   : block;
+    flex-basis: 15%;
 }
 
-.flex-items:nth-child(3) {
-    display: block;
-    flex-basis: 10%;
-}
-
-.flex-items:nth-child(4) {
-    display: block;
-    flex-basis: 10%;
-}
-
-.flex-items:nth-child(5) {
-    display: block;
-    flex-basis: 10%;
-}
-
-.flex-items:nth-child(6) {
-    display: block;
-    flex-basis: 10%;
-}
 .content-propos {
-    max-width: 500px;
+    max-width : 500px;
     text-align: center;
-    padding: 100px;
+    padding   : 100px;
 }
 
 .content-parcours {
-    max-width: 500px;
-    text-align: center;
-    padding: 100px;
+    height     : 150px;
+    max-width  : 500px;
+    text-align : center;
 }
 
 /* Container for skill bars */
 .container-competences {
-    margin-left: 25%;
-    display: flex;
-    align-items: flex-start;
+    margin-right: 10%;
+    margin-left : 25%;
+    display     : flex;
+    align-items : flex-start;
 }
-
-* {
-    box-sizing: border-box
-}
-
 
 .skills {
-    text-align: center; /* Right-align text */
-    padding-top: 10px; /* Add top padding */
-    padding-bottom: 10px; /* Add bottom padding */
+    line-height     : 26px;
+    text-align      : center;
+    padding-top     : 10px;
+    padding-bottom  : 10px;
     background-color: rgb(47, 233, 145);
-    color: black;
-    border-radius: 33px;
-
+    color           : black;
+    border-radius   : 33px;
 }
 
 .html {
     width: 90%;
 }
 
-/* Green */
 .css {
-    width: 80%;
+    width: 40%;
 }
 
-/* Blue */
 .js {
-    width: 65%;
+    width: 50%;
 }
 
-/* Red */
 .php {
-    width: 60%;
+    width: 70%;
 }
 
-/* Dark Grey */
+.symfony {
+    width: 30%;
+}
 
+.csharp {
+    width: 40%;
+}
 
 .content-contact {
-    max-width: 500px;
+    border    : 1px solid black;
+    max-width : 500px;
     text-align: center;
-    padding: 100px;
+    padding   : 100px;
 }
 
 .form-contact {
     margin: 10px;
 }
 
-.content-realisations {
-    max-width: 500px;
-    text-align: center;
-    padding: 100px;
-}
-
-.container {
+ .container-propos, .container-parcours {
     justify-content: center;
-    align-items: flex-start;
-    display: flex;
-}
+    align-items    : flex-start;
+    display        : flex;
+} 
 
 #btn-confirm {
-    color: whitesmoke;
+    color           : whitesmoke;
     background-color: #5d90dd;
 }
-
-footer {
-    min-height: 250px;
-    background-color: #0e1963;
+ 
+.mail {
+    width : 64px;
+    height: 64px;
+}
+.form-inline {
+    gap: 30px;
+    display: grid; 
+    grid-template-columns: 200px 250px; 
+    grid-template-rows: 30px 30px 30px; 
+}
+.form-contact__label{
+    text-align: left;
+}
+.form-contact__textarea{
+    padding: 10px;
+    resize: none;
+    width: 250px;
+    height: 150px;
+}
+input {
+    width: 250px;
+    height: 25px;
+}
+.img {
+    height: 246px;
+    width: 441px;
+}
+.img-project{
+    float: left;
+    height: 400px;
+    width: 800px;
+}
+.legend{
+    display: grid;
+    grid-template-columns: 450px 250px; 
+    grid-template-rows: 15px 15px 15px 15px; 
+    gap: 15px;
+}
+.img-legend{
+    margin-top: 30px;
 }
