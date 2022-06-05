@@ -39,7 +39,9 @@ header{
 }
 
 #profile-picture {
-    border-radius: 75%;
+    margin-top: 100px;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
     height   : 414px;
     width    : 311px;
     float        : left;
