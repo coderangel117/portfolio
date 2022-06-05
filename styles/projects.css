@@ -1,0 +1,80 @@
+.a-img-txt{
+    display:grid;
+}
+
+/* les enfants se superposent */
+.a-img-txt>*{
+    grid-area:1/1/-1/-1;
+    /* raccourci pour grid-row et grid-column */
+}
+/*.a-img{*/
+/*    filter:invert(1);*/
+/*}*/
+/* le texte */
+.a-txt{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    opacity:0;
+    filter:invert(0); /* antibug si effet sur a-img */
+    transition:opacity 1.5s;
+}
+
+/*les couleurs de survol  */
+.c1{
+    background: rgba(92, 5, 230, 0.8); /* avec alpha */
+}
+
+/* le survol */
+.a-txt:hover{
+    opacity:1;
+}
+.a-img-txt:hover .a-img{
+    filter:invert(0);
+}
+/* la déco */
+.content-realisation{
+    margin: 0 5%;
+    display:grid;
+    grid-template-columns:  450px 450px 450px ;
+    grid-template-rows: 400px ;
+    grid-gap:24px;
+    gap:24px;
+}
+
+.social{
+    width: 64px;
+    height: 64px;
+}
+.lien{
+    width: 50px;
+    height: 50px;
+}
+img{
+    width:100%;
+    height:auto;
+}
+a{
+    text-decoration:none;
+}
+@media screen and (max-width: 1200px) {
+    .content-realisation{
+        margin: 25px 5%;
+        display:grid;
+        grid-template-columns: 450px  450px ;
+        grid-template-rows: 300px 300px ;
+        grid-gap:50px;
+        gap:50px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .content-realisation{
+        margin: 25px 5%;
+        display:grid;
+        grid-template-columns: 650px;
+        grid-template-rows: 450px 450px;
+        grid-gap:64px;
+        gap:64px;
+    }
+}
