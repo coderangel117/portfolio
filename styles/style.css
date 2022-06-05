@@ -104,38 +104,44 @@ header{
 
 .content-contact {
     border    : 1px solid black;
-    max-width : 500px;
     text-align: center;
     padding   : 100px;
 }
 
-.form-contact {
-    margin: 10px;
-}
 
- .container-propos, .container-parcours {
+.profile-picture{
+    padding-top: 100px;
+}
+.container-propos, .container, .container-parcours {
     justify-content: center;
     align-items    : flex-start;
     display        : flex;
-} 
+}
+.container-contact {
+    margin-bottom: 25px;
+    justify-content: center;
+    display        : flex;
+}
 
 #btn-confirm {
+    width: 75px;
     color           : whitesmoke;
     background-color: #5d90dd;
 }
- 
+
 .mail {
     width : 64px;
     height: 64px;
 }
 .form-inline {
     gap: 30px;
-    display: grid; 
-    grid-template-columns: 200px 250px; 
-    grid-template-rows: 30px 30px 30px; 
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 200px 250px;
+    grid-template-rows: 30px 30px 150px;
 }
 .form-contact__label{
-    text-align: left;
+    text-align: center;
 }
 .form-contact__textarea{
     padding: 10px;
@@ -147,10 +153,7 @@ input {
     width: 250px;
     height: 25px;
 }
-.img {
-    height: 246px;
-    width: 441px;
-}
+
 .img-project{
     float: left;
     height: 400px;
@@ -158,8 +161,8 @@ input {
 }
 .legend{
     display: grid;
-    grid-template-columns: 450px 250px; 
-    grid-template-rows: 15px 15px 15px 15px; 
+    grid-template-columns: 450px 250px;
+    grid-template-rows: 15px 15px 15px 15px;
     gap: 15px;
 }
 .img-legend{
