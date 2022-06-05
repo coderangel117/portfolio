@@ -53,12 +53,6 @@ header{
     padding   : 100px;
 }
 
-.content-parcours {
-    height     : 150px;
-    max-width  : 500px;
-    text-align : center;
-}
-
 /* Container for skill bars */
 .container-competences {
     margin-right: 10%;
