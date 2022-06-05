@@ -70,6 +70,13 @@ header{
     color           : black;
     border-radius   : 33px;
 }
+.competences {
+    display : block;
+    justify-content : space-between;
+}
+#competences p {
+    float : left;
+}
 
 .html {
     width: 90%;
