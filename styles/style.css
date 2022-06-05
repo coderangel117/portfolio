@@ -31,8 +31,11 @@ a {
 }
 
 header{
+    z-index: 1;
+    width: 100%;
+    background-color: white;
     margin-top: 0;
-    position     : relative;
+    position     : fixed;
 }
 
 #profile-picture {
