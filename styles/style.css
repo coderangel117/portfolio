@@ -103,10 +103,16 @@ header a {
     float        : left;
 }
 
+.container-propos {
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items    : flex-start;
+    display        : flex;
+}
 .content-propos {
-    max-width : 500px;
+    padding-top   : 100px;
+    max-width: 500px;
     text-align: center;
-    padding   : 100px;
 }
 
 /*******************************
