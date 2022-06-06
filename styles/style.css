@@ -6,14 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.name{
-    float: left;
-    margin: 0 15px;
-    font-size         : 24px;
-    line-height       : 26px;
-    padding           : 10px;
-}
+/*******************************
+* Balise générales
+ ******************************/
 h1{
     text-align: center;
 }
