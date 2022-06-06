@@ -117,51 +117,102 @@ header a {
     padding: 50px 0;
 }
 
-.skills {
-    line-height     : 26px;
-    text-align      : center;
-    padding-top     : 10px;
-    padding-bottom  : 10px;
-    background-color: rgb(47, 233, 145);
-    color           : black;
-    border-radius   : 33px;
+.section .container-parcours {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section h1 {
+    font-size: 3.5rem;
+}
+
+.section h2 {
+    font-size: 1.3rem;
+}
+
+
+.timeline {
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+ol {
+    margin:  0 25%;
+    font-size: 0;
+    width: 100vw;
+    padding: 250px 0;
+    /*transition: all 1s;*/
+}
+
+.timeline ol li {
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    width: 160px;
+    height: 3px;
+    background-color: #0e1963;
+}
+
+.timeline ol li:last-child {
+    width: 320px;
+}
+
+.timeline ol li:not(:first-child) {
+    margin-left: 14px;
+}
+
+.timeline ol li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1px);
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: #0e1963;
+}
+
+.timeline ol li div {
+    position: absolute;
+    left: calc(100% + 7px);
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    white-space: normal;
+    color: #0e1963;
+    background-color: beige;
+
+}
+
+.timeline ol li div::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
 }
 .competences {
     display : block;
     justify-content : space-between;
 }
-#competences p {
-    float : left;
+.level-tech{
+    margin-top: 15px;
+    border: 1px solid black;
+    border-radius:16px;
+    content: '';
+    width: 100%;
+    background-color: white;
 }
-
-.html {
-    width: 90%;
-}
-
-.css {
-    width: 40%;
-}
-
-.js {
-    width: 50%;
-}
-
-.php {
-    width: 70%;
-}
-
-.symfony {
-    width: 30%;
-}
-
-.csharp {
-    width: 40%;
-}
-
-.content-contact {
-    border    : 1px solid black;
-    text-align: center;
-    padding   : 100px;
+.percent{
+    height: 12px;
+    border-radius:16px;
+    background-color: #b3b0b0;
 }
 
 
