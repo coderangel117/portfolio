@@ -109,12 +109,12 @@ header a {
     padding   : 100px;
 }
 
-/* Container for skill bars */
-.container-competences {
-    margin-right: 10%;
-    margin-left : 25%;
-    display     : flex;
-    align-items : flex-start;
+/*******************************
+* SECTION DU PARCOURS
+*******************************/
+
+.section {
+    padding: 50px 0;
 }
 
 .skills {
