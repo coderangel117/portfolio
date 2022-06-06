@@ -34,6 +34,22 @@ a {
     text-decoration: none;
 }
 
+/*******************************
+* Header and menu
+ ******************************/
+.icon {
+    width: 150px;
+    height: 150px;
+}
+
+
+.name{
+    float: left;
+    margin: 0 15px;
+    font-size         : 24px;
+    line-height       : 26px;
+    padding           : 10px;
+}
 header{
     z-index: 1;
     width: 100%;
@@ -42,6 +58,47 @@ header{
     position     : fixed;
 }
 
+/* Adapted from https://codepen.io/mutedblues/pen/MmPNPG */
+
+header > * {
+    flex-grow: 1;
+}
+
+header h1 {
+    margin-left: 1rem;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/* "Hide" checkbox -- moves it off screen*/
+#menu-btn {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+}
+
+/* Hide hamburger for bigger screens */
+.menu-icon {
+    visibility: hidden;
+}
+
+.menu {
+    font-size         : 24px;
+    line-height       : 25px;
+    padding           : 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 2rem;
+}
+
+
+/*******************************
+* section À propos
+******************************/
 #profile-picture {
     margin-top: 100px;
     border-bottom-left-radius: 150px;
@@ -113,16 +170,83 @@ header{
 }
 
 
-.profile-picture{
-    padding-top: 100px;
+
+.a-img-txt{
+    display:grid;
 }
-.container-propos, .container, .container-parcours {
-    justify-content: center;
-    align-items    : flex-start;
-    display        : flex;
+
+/* les enfants se superposent */
+.a-img-txt>*{
+    grid-area:1/1/-1/-1;
+    /* raccourci pour grid-row et grid-column */
 }
-.container-contact {
-    margin-bottom: 25px;
+/*.a-img{*/
+/*    filter:invert(1);*/
+/*}*/
+/* le texte */
+.a-txt{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    opacity:0;
+    filter:invert(0); /* antibug si effet sur a-img */
+    transition:opacity 1.5s;
+}
+
+/*les couleurs de survol  */
+.c1{
+    background: rgba(92, 5, 230, 0.8); /* avec alpha */
+}
+
+/* le survol */
+.a-txt:hover{
+    opacity:1;
+}
+.a-img-txt:hover .a-img{
+    filter:invert(0);
+}
+/* la déco */
+.content-realisation{
+    margin: 10px 5%;
+    display:grid;
+    grid-template-columns:  400px 400px 400px ;
+    grid-template-rows: 400px ;
+    grid-gap:24px;
+    gap:24px;
+}
+
+
+.lien{
+    width: 50px;
+    height: 50px;
+}
+img{
+    width:100%;
+    height:auto;
+}
+a{
+    text-decoration:none;
+}
+
+
+/*******************************
+ * Formulaire de contact
+  ******************************/
+.social{
+    width: 64px;
+    height: 64px;
+}
+
+.content-contact {
+    gap: 35px;
+    display: grid;
+    grid-template-columns: 300px 550px;
+    grid-template-rows:  50px 50px 200px;
+}
+.form-contact__label{
+    font-size: 2rem;
+    display: flex;
     justify-content: center;
     display        : flex;
 }
@@ -618,42 +742,83 @@ header{
         background-color: #b3b0b0;
     }
 
-.mail {
-    width : 64px;
-    height: 64px;
-}
-.form-inline {
-    gap: 30px;
-    margin: 10px;
-    display: grid;
-    grid-template-columns: 200px 250px;
-    grid-template-rows: 30px 30px 150px;
-}
-.form-contact__label{
-    text-align: center;
-}
-.form-contact__textarea{
-    padding: 10px;
-    resize: none;
-    width: 250px;
-    height: 150px;
-}
-input {
-    width: 250px;
-    height: 25px;
-}
+    /********************************
+    * SECTION RÉALISATIONS
+    *********************************/
+    .content-realisation{
+        margin: 150px 5%;
+        display:grid;
+        grid-template-columns: 850px;
+        grid-template-rows: 785px ;
+        grid-gap:25px;
+        gap:25px;
+    }
 
-.img-project{
-    float: left;
-    height: 400px;
-    width: 800px;
-}
-.legend{
-    display: grid;
-    grid-template-columns: 450px 250px;
-    grid-template-rows: 15px 15px 15px 15px;
-    gap: 15px;
-}
-.img-legend{
-    margin-top: 30px;
+    .lien{
+        width: 150px;
+        height: 150px;
+    }
+
+    /*******************************
+    * Formulaire de contact
+     ******************************/
+
+    .social{
+        margin: 0 15px;
+        width: 64px;
+        height: 64px;
+    }
+
+    .content-contact {
+        gap: 35px;
+        display: grid;
+        grid-template-columns: 300px 550px;
+        grid-template-rows:  50px 50px 200px;
+    }
+    .form-contact__label{
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-contact__textarea{
+        padding: 10px;
+        font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    input{
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        height: 48px;
+    }
+    textarea{
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        /*height: 24px;*/
+    }
+    #btn-confirm {
+        width: 250px;
+        padding: 15px;
+        color           : #0e1963;
+        background-color: whitesmoke;
+    }
+    .link-social{
+        margin: 50px 10% 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: auto;
+        
+    }
+    /*.img-project{*/
+    /*    float: left;*/
+    /*    height: 400px;*/
+    /*    width: 800px;*/
+    /*}*/
 }
