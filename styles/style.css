@@ -1,10 +1,13 @@
 *,
 *::before,
 *::after {
-    color : #0e1963;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+*::selection{
+    background-color: #0e1963;
+    color: white;
 }
 /*******************************
 * Balise générales
