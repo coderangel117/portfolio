@@ -87,14 +87,14 @@ header a {
 }
 
 .menu {
-    font-size : 24px;
-    line-height : 25px;
-    padding : 10px 30px;
-    display : flex;
-    justify-content : space-between;
-    align-items : center;
-    max-width : 100%;
-    margin : 0 2rem;
+    font-size: 24px;
+    line-height: 25px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 2rem;
 }
 
 
@@ -115,6 +115,7 @@ header a {
     align-items: flex-start;
     display: flex;
 }
+
 .content-propos {
     padding-top: 100px;
     max-width: 500px;
