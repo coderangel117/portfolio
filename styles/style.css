@@ -240,7 +240,7 @@ ol {
 }
 
 /*******************************
-* section des competences
+* SECTION COMPETENCES
  ******************************/
 
 .container-competences {
@@ -273,6 +273,9 @@ ol {
     background-color: #b3b0b0;
 }
 
+/********************************
+* SECTION RÉALISATIONS
+*********************************/
 
 .a-img-txt {
     display: grid;
@@ -284,10 +287,6 @@ ol {
     /* raccourci pour grid-row et grid-column */
 }
 
-/*.a-img{*/
-/*    filter:invert(1);*/
-/*}*/
-/* le texte */
 .a-txt {
     display: flex;
     justify-content: center;
@@ -384,12 +383,6 @@ textarea {
     color: #0e1963;
     background-color: whitesmoke;
 }
-
-/*.img-project{*/
-/*    float: left;*/
-/*    height: 400px;*/
-/*    width: 800px;*/
-/*}*/
 
 
 @media screen and (max-width: 1300px) {
