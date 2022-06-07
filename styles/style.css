@@ -152,7 +152,7 @@ header a {
 }
 
 ol {
-    margin: 0 25%;
+    margin: 0 15%;
     font-size: 0;
     width: 100vw;
     padding: 150px 0;
@@ -315,7 +315,7 @@ ol {
 .content-realisation {
     margin: 10px 5%;
     display: grid;
-    grid-template-columns:  400px 400px 400px;
+    grid-template-columns:  375px 375px 375px;
     grid-template-rows: 300px;
     grid-gap: 24px;
     gap: 24px;
@@ -345,6 +345,7 @@ a {
 }
 
 .content-contact {
+    margin: 25px 20%;
     gap: 35px;
     display: grid;
     grid-template-columns: 300px 550px;
@@ -359,19 +360,20 @@ a {
 }
 
 .form-contact__textarea {
-    padding: 10px;
     font-size: 3.5rem;
     display: flex;
     justify-content: center;
 }
 
 input {
+    font-size: 1.5rem;
     resize: none;
     width: 100%;
     height: 48px;
 }
 
 textarea {
+    font-size: 1.5rem;
     resize: none;
     width: 100%;
     /*height: 24px;*/
@@ -417,6 +419,18 @@ textarea {
     .percent {
         border-radius: 16px;
         background-color: #b3b0b0;
+    }
+
+    /********************************
+    * SECTION REALISATIONS
+    *********************************/
+    .content-realisation {
+        margin: 25px 5%;
+        display: grid;
+        grid-template-columns: 450px 450px;
+        grid-template-rows: 300px 300px;
+        grid-gap: 50px;
+        gap: 50px;
     }
 }
 
@@ -588,17 +602,70 @@ textarea {
     .timeline .arrows {
         display: none;
     }
+    /*******************************
+    * SECTION CONTACT
+    ******************************/
+    .social {
+        margin: 0 15px;
+        width: 64px;
+        height: 64px;
+    }
 
-    /********************************
-    * SECTION RÉALISATIONS
-    *********************************/
-    .content-realisation {
-        margin: 25px 5%;
-        display: grid;
-        grid-template-columns: 450px  450px;
-        grid-template-rows: 300px 300px;
-        grid-gap: 50px;
+    .content-contact {
+        overflow: hidden;
+        margin: 25px 10%;
         gap: 50px;
+        display: grid;
+        grid-template-columns: 250px 400px;
+        grid-template-rows:  50px 50px 200px;
+    }
+
+    .form-contact__label {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-contact__textarea {
+        padding: 10px;
+        font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        font-size: 1.5rem;
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        height: 48px;
+    }
+
+    textarea {
+        font-size: 2rem;
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        /*height: 24px;*/
+    }
+
+    #btn-confirm {
+        font-size: 1.5rem;
+        width: 250px;
+        padding: 15px;
+        color: #0e1963;
+        background-color: whitesmoke;
+    }
+
+    .link-social {
+        margin: 50px 10% 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: auto;
+
     }
 }
 
@@ -633,6 +700,88 @@ textarea {
     .percent {
         border-radius: 16px;
         background-color: #b3b0b0;
+    }
+
+    /********************************
+    * SECTION REALISATIONS
+    *********************************/
+    .content-realisation {
+        margin: 150px 5%;
+        display: grid;
+        grid-template-columns: 700px;
+        grid-template-rows: 550px;
+        grid-gap: 25px;
+        gap: 25px;
+    }
+
+    .lien {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*******************************
+    * SECTION CONTACT
+    ******************************/
+    .social {
+        margin: 0 15px;
+        width: 64px;
+        height: 64px;
+    }
+
+    .content-contact {
+        margin: 25px 5%;
+        gap: 50px;
+        display: grid;
+        grid-template-columns: 250px 300px;
+        grid-template-rows:  50px 50px 200px;
+    }
+
+    .form-contact__label {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-contact__textarea {
+        padding: 10px;
+        font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        font-size: 1.5rem;
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        height: 48px;
+    }
+
+    textarea {
+        font-size: 2rem;
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        /*height: 24px;*/
+    }
+
+    #btn-confirm {
+        font-size: 1.5rem;
+        width: 250px;
+        padding: 15px;
+        color: #0e1963;
+        background-color: whitesmoke;
+    }
+
+    .link-social {
+        margin: 50px 25% 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: auto;
+
     }
 }
 
@@ -762,10 +911,9 @@ textarea {
 
     #profile-picture {
         margin-top: 150px;
-        border-bottom-left-radius: 350px;
-        border-bottom-right-radius: 350px;
-        height: 750px;
-        width: 580px;
+        border-radius: 300px;
+        height: 600px;
+        width: 600px;
     }
 
 
@@ -903,9 +1051,10 @@ textarea {
     }
 
     .content-contact {
+        margin: 25px 5%;
         gap: 35px;
         display: grid;
-        grid-template-columns: 300px 550px;
+        grid-template-columns: 200px 550px;
         grid-template-rows:  50px 50px 200px;
     }
 
@@ -934,10 +1083,10 @@ textarea {
         border: 1px solid;
         resize: none;
         width: 100%;
-        /*height: 24px;*/
     }
 
     #btn-confirm {
+        font-size: 1.5rem;
         width: 250px;
         padding: 15px;
         color: #0e1963;
@@ -953,10 +1102,4 @@ textarea {
         height: auto;
 
     }
-
-    /*.img-project{*/
-    /*    float: left;*/
-    /*    height: 400px;*/
-    /*    width: 800px;*/
-    /*}*/
 }
