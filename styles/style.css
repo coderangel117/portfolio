@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+    color: #0e1963;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -278,6 +279,7 @@ ol {
 *********************************/
 
 .a-img-txt {
+    user-select: none;
     display: grid;
 }
 
@@ -322,11 +324,13 @@ ol {
 }
 
 .lien {
+    user-select: none;
     width: 50px;
     height: 50px;
 }
 
 img {
+    user-select: none;
     width: 100%;
     height: auto;
 }
