@@ -5,14 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
-*::selection{
+
+*::selection {
     background-color: #0e1963;
     color: white;
 }
+
 /*******************************
 * Balise générales
  ******************************/
-h1{
+h1 {
     text-align: center;
 }
 
@@ -21,7 +23,7 @@ li {
 }
 
 p {
-    font-size:x-large
+    font-size: x-large
 }
 
 a :after {
@@ -34,7 +36,7 @@ a {
 }
 
 /*******************************
-* Header and menu
+* SECTION MENU
  ******************************/
 .icon {
     width: 150px;
@@ -42,19 +44,20 @@ a {
 }
 
 
-.name{
+.name {
     float: left;
     margin: 0 15px;
-    font-size         : 24px;
-    line-height       : 26px;
-    padding           : 10px;
+    font-size: 24px;
+    line-height: 26px;
+    padding: 10px;
 }
-header{
+
+header {
     z-index: 1;
     width: 100%;
     background-color: white;
     margin-top: 0;
-    position     : fixed;
+    position: fixed;
 }
 
 /* Adapted from https://codepen.io/mutedblues/pen/MmPNPG */
@@ -84,9 +87,9 @@ header a {
 }
 
 .menu {
-    font-size         : 24px;
-    line-height       : 25px;
-    padding           : 10px 30px;
+    font-size: 24px;
+    line-height: 25px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,31 +99,31 @@ header a {
 
 
 /*******************************
-* section À propos
+* SECTION PROPOS
 ******************************/
 #profile-picture {
-    margin-top: 100px;
-    border-bottom-left-radius: 150px;
-    border-bottom-right-radius: 150px;
-    height   : 414px;
-    width    : 311px;
-    float        : left;
+    margin: 100px 0;
+    border-radius: 150px;
+    height: 300px;
+    width: 300px;
+    float: left;
 }
 
 .container-propos {
     background-color: whitesmoke;
     justify-content: center;
-    align-items    : flex-start;
-    display        : flex;
+    align-items: flex-start;
+    display: flex;
 }
+
 .content-propos {
-    padding-top   : 100px;
+    padding-top: 100px;
     max-width: 500px;
     text-align: center;
 }
 
 /*******************************
-* SECTION DU PARCOURS
+* SECTION PARCOURS
 *******************************/
 
 .section {
@@ -149,11 +152,10 @@ header a {
 }
 
 ol {
-    margin:  0 25%;
+    margin: 0 15%;
     font-size: 0;
     width: 100vw;
-    padding: 250px 0;
-    /*transition: all 1s;*/
+    padding: 150px 0;
 }
 
 .timeline ol li {
@@ -238,174 +240,197 @@ ol {
 }
 
 /*******************************
-* section des competences
+* SECTION COMPETENCES
  ******************************/
 
 .container-competences {
     padding: 100px 10%;
     background-color: whitesmoke;
     display: grid;
-    grid-template-columns: 250px 250px 250px 250px  ;
-    grid-template-rows: 150px 150px ;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 150px 150px;
     grid-gap: 50px;
 }
-.tech-name{
+
+.tech-name {
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
 }
-.level-tech{
+
+.level-tech {
     margin-top: 15px;
     border: 1px solid black;
-    border-radius:16px;
+    border-radius: 16px;
     content: '';
     width: 100%;
     background-color: white;
 }
-.percent{
+
+.percent {
     height: 12px;
-    border-radius:16px;
+    border-radius: 16px;
     background-color: #b3b0b0;
 }
 
+/********************************
+* SECTION REALISATIONS
+*********************************/
 
-
-.a-img-txt{
-    display:grid;
+.a-img-txt {
+    display: grid;
 }
 
 /* les enfants se superposent */
-.a-img-txt>*{
-    grid-area:1/1/-1/-1;
+.a-img-txt > * {
+    grid-area: 1/1/-1/-1;
     /* raccourci pour grid-row et grid-column */
 }
-/*.a-img{*/
-/*    filter:invert(1);*/
-/*}*/
-/* le texte */
-.a-txt{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#fff;
-    opacity:0;
-    filter:invert(0); /* antibug si effet sur a-img */
-    transition:opacity 1.5s;
+
+.a-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    filter: invert(0); /* antibug si effet sur a-img */
+    transition: opacity 1.5s;
 }
 
 /*les couleurs de survol  */
-.c1{
+.c1 {
     background: rgba(92, 5, 230, 0.8); /* avec alpha */
 }
 
 /* le survol */
-.a-txt:hover{
-    opacity:1;
+.a-txt:hover {
+    opacity: 1;
 }
-.a-img-txt:hover .a-img{
-    filter:invert(0);
+
+.a-img-txt:hover .a-img {
+    filter: invert(0);
 }
+
 /* la déco */
-.content-realisation{
+.content-realisation {
     margin: 10px 5%;
-    display:grid;
-    grid-template-columns:  400px 400px 400px ;
-    grid-template-rows: 400px ;
-    grid-gap:24px;
-    gap:24px;
+    display: grid;
+    grid-template-columns:  375px 375px 375px;
+    grid-template-rows: 300px;
+    grid-gap: 24px;
+    gap: 24px;
 }
 
-
-.lien{
+.lien {
     width: 50px;
     height: 50px;
 }
-img{
-    width:100%;
-    height:auto;
+
+img {
+    width: 100%;
+    height: auto;
 }
-a{
-    text-decoration:none;
+
+a {
+    text-decoration: none;
 }
 
 
 /*******************************
- * Formulaire de contact
+ * SECTION CONTACT
   ******************************/
-.social{
+.social {
     width: 64px;
     height: 64px;
 }
 
 .content-contact {
+    margin: 25px 20%;
     gap: 35px;
     display: grid;
     grid-template-columns: 300px 550px;
     grid-template-rows:  50px 50px 200px;
 }
-.form-contact__label{
+
+.form-contact__label {
     font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.form-contact__textarea{
-    padding: 10px;
+.form-contact__textarea {
     font-size: 3.5rem;
     display: flex;
     justify-content: center;
 }
 
-input{
+input {
+    font-size: 1.5rem;
     resize: none;
     width: 100%;
     height: 48px;
 }
-textarea{
+
+textarea {
+    font-size: 1.5rem;
     resize: none;
     width: 100%;
     /*height: 24px;*/
 }
+
 #btn-confirm {
     margin: 0 350px;
     width: 75px;
-    color           : #0e1963;
+    color: #0e1963;
     background-color: whitesmoke;
 }
 
-/*.img-project{*/
-/*    float: left;*/
-/*    height: 400px;*/
-/*    width: 800px;*/
-/*}*/
 
+@media screen and (max-width: 1300px) {
 
-@media screen and (max-width: 1300px){
+    /********************************
+    * SECTION COMPETENCES
+    *********************************/
 
     .container-competences {
-        padding: 100px  15%;
+        padding: 100px 15%;
         display: grid;
-        grid-template-columns: 250px 250px 250px ;
-        grid-template-rows: 150px 150px ;
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: 150px 150px;
         grid-gap: 50px;
     }
-    .tech-name{
+
+    .tech-name {
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
     }
-    .level-tech{
+
+    .level-tech {
         margin-top: 15px;
         border: 1px solid black;
-        border-radius:16px;
+        border-radius: 16px;
         content: '';
         width: 100%;
         background-color: white;
     }
-    .percent{
-        border-radius:16px;
+
+    .percent {
+        border-radius: 16px;
         background-color: #b3b0b0;
+    }
+
+    /********************************
+    * SECTION REALISATIONS
+    *********************************/
+    .content-realisation {
+        margin: 25px 5%;
+        display: grid;
+        grid-template-columns: 450px 450px;
+        grid-template-rows: 300px 300px;
+        grid-gap: 50px;
+        gap: 50px;
     }
 }
 
@@ -418,11 +443,11 @@ textarea{
         grid-area: title;
     }
 
-    .name{
+    .name {
         /*display: none;*/
         margin: 0 5px;
-        font-size         : 32px;
-        line-height       : 36px;
+        font-size: 32px;
+        line-height: 36px;
     }
 
     .menu a {
@@ -520,14 +545,17 @@ textarea{
     .section h1 {
         font-size: 2.3rem;
     }
+
     .timeline ol,
     .timeline ol li {
         width: auto;
     }
-    ol{
+
+    ol {
         margin-left: 10px;
         margin-right: 10px;
     }
+
     .timeline ol {
         padding: 0;
         transform: none !important;
@@ -574,62 +602,203 @@ textarea{
     .timeline .arrows {
         display: none;
     }
+    /*******************************
+    * SECTION CONTACT
+    ******************************/
+    .social {
+        margin: 0 15px;
+        width: 64px;
+        height: 64px;
+    }
 
-    /********************************
-    * SECTION RÉALISATIONS
-    *********************************/
-    .content-realisation{
-        margin: 25px 5%;
-        display:grid;
-        grid-template-columns: 450px  450px ;
-        grid-template-rows: 300px 300px ;
-        grid-gap:50px;
-        gap:50px;
+    .content-contact {
+        overflow: hidden;
+        margin: 25px 10%;
+        gap: 50px;
+        display: grid;
+        grid-template-columns: 250px 400px;
+        grid-template-rows:  50px 50px 200px;
+    }
+
+    .form-contact__label {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-contact__textarea {
+        padding: 10px;
+        font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        font-size: 1.5rem;
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        height: 48px;
+    }
+
+    textarea {
+        font-size: 2rem;
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        /*height: 24px;*/
+    }
+
+    #btn-confirm {
+        font-size: 1.5rem;
+        width: 250px;
+        padding: 15px;
+        color: #0e1963;
+        background-color: whitesmoke;
+    }
+
+    .link-social {
+        margin: 50px 10% 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: auto;
+
     }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
+    /********************************
+    * SECTION COMPETENCES
+    *********************************/
     .container-competences {
         padding: 100px 15%;
         display: grid;
-        grid-template-columns: 250px 250px ;
+        grid-template-columns: 250px 250px;
         grid-template-rows: 150px 150px 150px;
         grid-gap: 50px;
     }
-    .tech-name{
+
+    .tech-name {
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
     }
-    .level-tech{
+
+    .level-tech {
         margin-top: 15px;
         border: 1px solid black;
-        border-radius:16px;
+        border-radius: 16px;
         content: '';
         width: 100%;
         background-color: white;
     }
-    .percent{
-        border-radius:16px;
+
+    .percent {
+        border-radius: 16px;
         background-color: #b3b0b0;
+    }
+
+    /********************************
+    * SECTION REALISATIONS
+    *********************************/
+    .content-realisation {
+        margin: 150px 5%;
+        display: grid;
+        grid-template-columns: 700px;
+        grid-template-rows: 550px;
+        grid-gap: 25px;
+        gap: 25px;
+    }
+
+    .lien {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*******************************
+    * SECTION CONTACT
+    ******************************/
+    .social {
+        margin: 0 15px;
+        width: 64px;
+        height: 64px;
+    }
+
+    .content-contact {
+        margin: 25px 5%;
+        gap: 50px;
+        display: grid;
+        grid-template-columns: 250px 300px;
+        grid-template-rows:  50px 50px 200px;
+    }
+
+    .form-contact__label {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-contact__textarea {
+        padding: 10px;
+        font-size: 3.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        font-size: 1.5rem;
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        height: 48px;
+    }
+
+    textarea {
+        font-size: 2rem;
+        border: 1px solid;
+        resize: none;
+        width: 100%;
+        /*height: 24px;*/
+    }
+
+    #btn-confirm {
+        font-size: 1.5rem;
+        width: 250px;
+        padding: 15px;
+        color: #0e1963;
+        background-color: whitesmoke;
+    }
+
+    .link-social {
+        margin: 50px 25% 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        height: auto;
+
     }
 }
 
-@media screen and (max-device-width: 480px)and (orientation: portrait){
+@media screen and (max-device-width: 480px)and (orientation: portrait) {
 
     /********************************
-    * SECTION DU MENU
+    * SECTION MENU
     ********************************/
     a {
         grid-area: title;
     }
 
-    .name{
+    .name {
         margin: 0 15px;
-        font-size         : 72px;
-        line-height       : 52px;
-        padding           : 20px;
+        font-size: 72px;
+        line-height: 52px;
+        padding: 20px;
     }
 
     .menu a {
@@ -680,8 +849,8 @@ textarea{
     }
 
     .menu {
-        font-size         : 48px;
-        line-height       : 25px;
+        font-size: 48px;
+        line-height: 25px;
         z-index: 1;
         grid-area: nav;
         max-width: unset;
@@ -694,18 +863,6 @@ textarea{
         display: flex;
         flex-direction: column;
     }
-
-    /*.menu {*/
-    /*    font-size         : 48px;*/
-    /*    line-height       : 25px;*/
-    /*    padding           : 15px;*/
-    /*    display: flex;*/
-    /*    justify-content: space-between;*/
-    /*    align-items: center;*/
-    /*    max-width: 100%;*/
-    /*    margin: 0 2rem;*/
-    /*}*/
-
 
     .menu a {
         padding: 15px 0;
@@ -737,24 +894,26 @@ textarea{
     }
 
     /********************************
-    * SECTION À PROPOS
+    * SECTION PROPOS
     ****************************/
-    h1{
+    h1 {
         margin: 25px 0;
         font-size: 48px;
     }
-    .content-propos{
+
+    .content-propos {
         display: none;
     }
+
     .container-propos {
-        padding   : 50px;
+        padding: 50px;
     }
+
     #profile-picture {
         margin-top: 150px;
-        border-bottom-left-radius: 350px;
-        border-bottom-right-radius: 350px;
-        height   : 750px;
-        width    : 580px;
+        border-radius: 300px;
+        height: 600px;
+        width: 600px;
     }
 
 
@@ -762,7 +921,7 @@ textarea{
     * SECTION PARCOURS
     *********************************/
     .timeline time {
-        padding : 0 15px;
+        padding: 0 15px;
         display: block;
         font-size: 2.2rem;
         font-weight: bold;
@@ -773,14 +932,17 @@ textarea{
     .section h1 {
         font-size: 2.3rem;
     }
+
     .timeline ol,
     .timeline ol li {
         width: auto;
     }
-    ol{
+
+    ol {
         margin-left: 10px;
         margin-right: 10px;
     }
+
     .timeline ol {
         padding: 0;
         transform: none !important;
@@ -829,113 +991,115 @@ textarea{
     .timeline .arrows {
         display: none;
     }
+
     /********************************
     * SECTION COMPETENCES
     ***************************/
-
     .container-competences {
         padding: 100px 0 100px 10%;
         display: grid;
-        grid-template-columns: 750px ;
-        grid-template-rows: 100px  100px  100px  100px ;
+        grid-template-columns: 750px;
+        grid-template-rows: 100px  100px  100px  100px;
         grid-gap: 50px;
     }
+
     .tech-name p {
         font-size: 2.5rem;
         padding: 0 10px;
         display: flex;
         justify-content: space-between;
     }
-    .level-tech{
+
+    .level-tech {
         margin-top: 25px;
         border: 1px solid black;
-        border-radius:16px;
+        border-radius: 16px;
         width: 100%;
         background-color: white;
     }
+
     .percent {
         height: 24px;
-        border-radius:16px;
+        border-radius: 16px;
         background-color: #b3b0b0;
     }
 
     /********************************
-    * SECTION RÉALISATIONS
+    * SECTION REALISATIONS
     *********************************/
-    .content-realisation{
+    .content-realisation {
         margin: 150px 5%;
-        display:grid;
+        display: grid;
         grid-template-columns: 850px;
-        grid-template-rows: 785px ;
-        grid-gap:25px;
-        gap:25px;
+        grid-template-rows: 785px;
+        grid-gap: 25px;
+        gap: 25px;
     }
 
-    .lien{
+    .lien {
         width: 150px;
         height: 150px;
     }
 
     /*******************************
-    * Formulaire de contact
+    * SECTION CONTACT
      ******************************/
-
-    .social{
+    .social {
         margin: 0 15px;
         width: 64px;
         height: 64px;
     }
 
     .content-contact {
+        margin: 25px 5%;
         gap: 35px;
         display: grid;
-        grid-template-columns: 300px 550px;
+        grid-template-columns: 200px 550px;
         grid-template-rows:  50px 50px 200px;
     }
-    .form-contact__label{
+
+    .form-contact__label {
         font-size: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .form-contact__textarea{
+    .form-contact__textarea {
         padding: 10px;
         font-size: 3.5rem;
         display: flex;
         justify-content: center;
     }
 
-    input{
+    input {
         border: 1px solid;
         resize: none;
         width: 100%;
         height: 48px;
     }
-    textarea{
+
+    textarea {
         border: 1px solid;
         resize: none;
         width: 100%;
-        /*height: 24px;*/
     }
+
     #btn-confirm {
+        font-size: 1.5rem;
         width: 250px;
         padding: 15px;
-        color           : #0e1963;
+        color: #0e1963;
         background-color: whitesmoke;
     }
-    .link-social{
+
+    .link-social {
         margin: 50px 10% 0 0;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 40%;
         height: auto;
-        
+
     }
-    /*.img-project{*/
-    /*    float: left;*/
-    /*    height: 400px;*/
-    /*    width: 800px;*/
-    /*}*/
 }
