@@ -377,8 +377,10 @@ textarea {
 }
 
 #btn-confirm {
-    margin: 0 350px;
-    width: 75px;
+    font-size: 25px;
+    padding: 15px;
+    margin: 0 400px;
+    width: 250px;
     color: #0e1963;
     background-color: whitesmoke;
 }
