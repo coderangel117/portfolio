@@ -16,6 +16,7 @@
 * Balise générales
  ******************************/
 h1 {
+    font-size: 48px;
     text-align: center;
 }
 
@@ -65,10 +66,6 @@ header {
 
 header > * {
     flex-grow: 1;
-}
-
-header h1 {
-    margin-left: 1rem;
 }
 
 header a {
@@ -136,10 +133,6 @@ header a {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-}
-
-.section h1 {
-    font-size: 3.5rem;
 }
 
 .section h2 {
@@ -546,9 +539,6 @@ textarea {
     /********************************
     * SECTION PARCOURS
     ******************************/
-    .section h1 {
-        font-size: 2.3rem;
-    }
 
     .timeline ol,
     .timeline ol li {
@@ -900,10 +890,6 @@ textarea {
     /********************************
     * SECTION PROPOS
     ****************************/
-    h1 {
-        margin: 25px 0;
-        font-size: 48px;
-    }
 
     .content-propos {
         display: none;
@@ -930,11 +916,6 @@ textarea {
         font-size: 2.2rem;
         font-weight: bold;
         margin-bottom: 8px;
-    }
-
-
-    .section h1 {
-        font-size: 2.3rem;
     }
 
     .timeline ol,
@@ -1104,6 +1085,5 @@ textarea {
         justify-content: center;
         width: 40%;
         height: auto;
-
     }
 }
