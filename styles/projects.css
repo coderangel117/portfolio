@@ -1,0 +1,47 @@
+:root {
+    --even-background-color: whitesmoke;
+    --odd-background-color: #eee;
+    --all-color: #0e1963;
+    --link-hover-color: #0e1963;
+    --body-selection-color: #0e1963;
+    --body-selection-background-color:#fff;
+}
+
+@media (prefers-color-scheme: dark){
+    :root {
+        --odd-background-color: #222;
+        --even-background-color: #333;
+        --all-color: #aaa;
+        --link-hover-color: #888;
+        --body-selection-color: #fff;
+        --body-selection-background-color:#0e1963;
+    }
+}
+*,
+*::before,
+*::after {
+    color: var(--all-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color:  var(--body-selection-background-color);
+    color: var(--body-selection-color);
+}
+body{
+    background-color: var(--even-background-color);
+}
+
+.img-project{
+    padding: 10px;
+    max-width: 500px;
+    max-height: 500px;
+    float: left;
+}
+.desc{
+    right: 0;
+    height: 750px;
+    padding-top: 75px;
+}
