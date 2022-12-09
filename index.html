@@ -203,26 +203,27 @@
 </div>
 <div class="container-contact">
     <h1 id="contact">Me Contacter</h1>
-    <form class="content-contact" method="post">
+    <form class="content-contact" method="post" action="contact.php">
         <div class="form-contact__label">
             <label for="nom">Nom</label>
         </div>
         <div class="form-contact__textarea">
-            <input id="nom" type="text">
+            <input id="nom" name="nom"  required type="text">
         </div>
         <div class="form-contact__label">
             <label for="mail">Adresse e-mail</label>
         </div>
         <div class="form-contact__textarea">
-            <input type="text" class="form-contact__input" name="mail" id="mail">
+            <input type="email" class="form-contact__input" required name="mail" id="mail">
         </div>
         <div class="form-contact__label">
             <label for="message">Votre message</label>
         </div>
-        <div class="form-contact__textarea"><textarea name="message" id="message" cols="60" rows="5"></textarea>
+        <div class="form-contact__textarea">
+            <textarea name="message" id="message" cols="60" rows="5" required placeholder="Votre message"></textarea>
         </div>
         <br>
-        <button id="btn-confirm">Envoyer</button>
+        <button name="envoyer" id="btn-confirm">Envoyer</button>
     </form>
     <div class="link">
         <div class="icon">
