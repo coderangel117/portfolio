@@ -1,21 +1,41 @@
+:root {
+    --even-background-color: whitesmoke;
+    --odd-background-color: #eee;
+    --all-color: #0e1963;
+    --link-hover-color: #0e1963;
+    --body-selection-color: #0e1963;
+    --body-selection-background-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --odd-background-color: #222;
+        --even-background-color: #333;
+        --all-color: #aaa;
+        --link-hover-color: #888;
+        --body-selection-color: #fff;
+        --body-selection-background-color: #0e1963;
+    }
+}
 *,
 *::before,
 *::after {
-    color: #0e1963;
+    color: var(--all-color);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 *::selection {
-    background-color: #0e1963;
-    color: white;
+    background-color: var(--body-selection-background-color);
+    color: var(--body-selection-color);
 }
 
 /*******************************
 * Balise générales
  ******************************/
 h1 {
+    font-family: lemonmilk, serif;
     font-size: 48px;
     text-align: center;
 }
@@ -28,12 +48,12 @@ p {
     font-size: x-large
 }
 
-a :after {
-    color: lightblue; /* color after user click*/
+a :hover {
+    background-color: var(--link-hover-color);
 }
 
 a {
-    color: #0e1963;
+    color: var(--all-color);
     text-decoration: none;
 }
 
@@ -57,7 +77,7 @@ a {
 header {
     z-index: 1;
     width: 100%;
-    background-color: white;
+    background-color: var(--odd-background-color);
     margin-top: 0;
     position: fixed;
 }
@@ -99,6 +119,20 @@ header a {
 /*******************************
 * SECTION PROPOS
 ******************************/
+.container-propos {
+    background-color: var(--even-background-color);
+}
+
+.content-propos {
+    padding-top: 100px;
+    justify-content : space-around;
+    align-items: center;
+    display: flex;
+}
+.propos-description{
+    max-width: 500px;
+    text-align: center;
+}
 #profile-picture {
     margin: 100px 0;
     border-radius: 150px;
@@ -107,40 +141,30 @@ header a {
     float: left;
 }
 
-.container-propos {
-    background-color: whitesmoke;
-    justify-content: center;
-    align-items: flex-start;
-    display: flex;
-}
-
-.content-propos {
-    padding-top: 100px;
-    max-width: 500px;
-    text-align: center;
-}
-
 /*******************************
 * SECTION PARCOURS
 *******************************/
 
 .section {
+    background-color: var(--odd-background-color);
     padding: 50px 0;
 }
 
 .section .container-parcours {
+    background-color: var(--odd-background-color);
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 
-.section h2 {
+.timeline h2 {
     font-size: 1.3rem;
 }
 
 
 .timeline {
+    background-color: var(--odd-background-color);
     white-space: nowrap;
     overflow-x: hidden;
 }
@@ -158,7 +182,7 @@ ol {
     list-style-type: none;
     width: 160px;
     height: 3px;
-    background-color: #0e1963;
+    background-color: var(--all-color);
 }
 
 .timeline ol li:last-child {
@@ -179,18 +203,19 @@ ol {
     height: 12px;
     transform: translateY(-50%);
     border-radius: 50%;
-    background: #0e1963;
+    background: var(--all-color);
 }
 
 .timeline ol li div {
+    border: 1px solid var(--all-color);
     position: absolute;
     left: calc(100% + 7px);
     width: 300px;
     padding: 10px;
     font-size: 1rem;
     white-space: normal;
-    color: #0e1963;
-    background-color: beige;
+    color: var(--all-color);
+    /* background-color: beige; */
 
 }
 
@@ -201,10 +226,11 @@ ol {
     left: 0;
     width: 0;
     height: 0;
-    border-style: solid;
+    border: 1px solid var(--all-color);
 }
 
 .timeline ol li:nth-child(odd) div {
+    /* border: 1px solid #0e1963; */
     top: -16px;
     transform: translateY(-100%);
 }
@@ -212,7 +238,7 @@ ol {
 .timeline ol li:nth-child(odd) div::before {
     top: 100%;
     border-width: 8px 8px 0 0;
-    border-color: white transparent transparent transparent;
+    border-color: var(--all-color) transparent transparent transparent;
 }
 
 .timeline ol li:nth-child(even) div {
@@ -222,7 +248,7 @@ ol {
 .timeline ol li:nth-child(even) div::before {
     top: -8px;
     border-width: 8px 0 0 8px;
-    border-color: transparent transparent transparent white;
+    border-color: transparent transparent transparent var(--all-color);
 }
 
 .timeline time {
@@ -238,8 +264,11 @@ ol {
  ******************************/
 
 .container-competences {
+    background-color: var(--even-background-color);
+}
+
+.content-competences {
     padding: 100px 10%;
-    background-color: whitesmoke;
     display: grid;
     grid-template-columns: 250px 250px 250px 250px;
     grid-template-rows: 150px 150px;
@@ -286,16 +315,16 @@ ol {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--all-color);
     opacity: 0;
     filter: invert(0); /* antibug si effet sur a-img */
-    transition: opacity 1.5s;
+    transition: opacity 3s;
 }
 
 /*les couleurs de survol  */
-.c1 {
-    background: rgba(92, 5, 230, 0.8); /* avec alpha */
-}
+/* .c1 { */
+/*     background: #5C05E6CC; !* avec alpha *! */
+/* } */
 
 /* le survol */
 .a-txt:hover {
@@ -307,11 +336,16 @@ ol {
 }
 
 /* la déco */
+.container-realisation {
+    background-color: var(--odd-background-color);
+}
+
 .content-realisation {
-    margin: 10px 5%;
+    padding: 50px 0;
+    margin: 0 10%;
     display: grid;
     grid-template-columns:  375px 375px 375px;
-    grid-template-rows: 300px;
+    grid-template-rows: 250px;
     grid-gap: 24px;
     gap: 24px;
 }
@@ -341,8 +375,12 @@ a {
     height: 64px;
 }
 
+.container-contact {
+    background-color: var(--even-background-color);
+}
+
 .content-contact {
-    margin: 25px 20%;
+    margin: 0 20%;
     gap: 35px;
     display: grid;
     grid-template-columns: 300px 550px;
@@ -376,23 +414,40 @@ textarea {
     /*height: 24px;*/
 }
 
+#btn-confirm:hover {
+    background-color: #0e1963;
+    color: white;
+    transition: .5s ease-in-out;
+}
+
 #btn-confirm {
+    position: relative;
     font-size: 25px;
     padding: 15px;
-    margin: 0 400px;
+    margin: 0 350px;
     width: 250px;
     color: #0e1963;
     background-color: whitesmoke;
 }
 
+.link {
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.icon {
+    flex-basis: 250px;
+    float: left;
+}
 
 @media screen and (max-width: 1300px) {
 
     /********************************
     * SECTION COMPETENCES
     *********************************/
-
-    .container-competences {
+    .content-competences {
         padding: 100px 15%;
         display: grid;
         grid-template-columns: 250px 250px 250px;
@@ -424,10 +479,11 @@ textarea {
     * SECTION REALISATIONS
     *********************************/
     .content-realisation {
-        margin: 25px 5%;
+        margin: 0 5%;
+        padding: 25px 0;
         display: grid;
         grid-template-columns: 450px 450px;
-        grid-template-rows: 300px 300px;
+        grid-template-rows: 300px 250px;
         grid-gap: 50px;
         gap: 50px;
     }
@@ -471,7 +527,7 @@ textarea {
     }
 
     .navicon {
-        background: #333;
+        background: var(--all-color);
         display: block;
         height: 2px;
         width: 30px;
@@ -487,7 +543,7 @@ textarea {
     }
 
     .navicon:before, .navicon:after {
-        background: #333;
+        background: var(--all-color);
         display: block;
         width: 100%;
         height: 100%;
@@ -499,20 +555,20 @@ textarea {
     .menu {
         z-index: 1;
         grid-area: nav;
-        max-width: 400px;
+        justify-content: center;
         max-height: 0;
         transition: max-height .6s ease-out;
         overflow: hidden;
         margin: 0;
         padding: 0;
-        background-color: #000;
+        background-color: var(--odd-background-color);
         display: flex;
         flex-direction: column;
     }
 
     .menu a {
-        border-right: 1px solid #fff;
-        background-color: #fff;
+        color: var(--all-color);
+        background-color: var(--odd-background-color);
         width: 100%;
         text-align: center;
     }
@@ -541,7 +597,6 @@ textarea {
     /********************************
     * SECTION PARCOURS
     ******************************/
-
     .timeline ol,
     .timeline ol li {
         width: auto;
@@ -598,6 +653,7 @@ textarea {
     .timeline .arrows {
         display: none;
     }
+
     /*******************************
     * SECTION CONTACT
     ******************************/
@@ -608,7 +664,6 @@ textarea {
     }
 
     .content-contact {
-        overflow: hidden;
         margin: 25px 10%;
         gap: 50px;
         display: grid;
@@ -653,16 +708,6 @@ textarea {
         color: #0e1963;
         background-color: whitesmoke;
     }
-
-    .link-social {
-        margin: 50px 10% 0 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40%;
-        height: auto;
-
-    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -670,7 +715,7 @@ textarea {
     /********************************
     * SECTION COMPETENCES
     *********************************/
-    .container-competences {
+    .content-competences {
         padding: 100px 15%;
         display: grid;
         grid-template-columns: 250px 250px;
@@ -702,12 +747,13 @@ textarea {
     * SECTION REALISATIONS
     *********************************/
     .content-realisation {
-        margin: 150px 5%;
+        margin: 0 5%;
+        padding: 10px 0;
         display: grid;
-        grid-template-columns: 700px;
-        grid-template-rows: 550px;
-        grid-gap: 25px;
-        gap: 25px;
+        grid-template-columns: 675px;
+        grid-template-rows: 600px;
+        grid-gap: 50px;
+        gap: 50px;
     }
 
     .lien {
@@ -763,25 +809,16 @@ textarea {
     }
 
     #btn-confirm {
-        font-size: 1.5rem;
-        width: 250px;
+        margin: 0 350px;
+        font-size: 15px;
+        width: 200px;
         padding: 15px;
         color: #0e1963;
         background-color: whitesmoke;
     }
-
-    .link-social {
-        margin: 50px 25% 0 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40%;
-        height: auto;
-
-    }
 }
 
-@media screen and (max-device-width: 480px)and (orientation: portrait) {
+@media screen and (max-device-width: 480px) {
 
     /********************************
     * SECTION MENU
@@ -791,8 +828,8 @@ textarea {
     }
 
     .name {
-        margin: 0 15px;
-        font-size: 72px;
+        margin: 0 5px;
+        font-size: 36px;
         line-height: 52px;
         padding: 20px;
     }
@@ -812,7 +849,7 @@ textarea {
         display: flex;
         justify-content: flex-end;
         align-items: baseline;
-        padding: 50px 35px 50px 0;
+        padding: 35px 25px 60px 0;
         position: relative;
         user-select: none;
         visibility: visible;
@@ -850,11 +887,8 @@ textarea {
         z-index: 1;
         grid-area: nav;
         max-width: unset;
-        max-height: 0;
         transition: max-height .6s ease-out;
         overflow: hidden;
-        margin: 0;
-        padding: 0;
         background-color: #000;
         display: flex;
         flex-direction: column;
@@ -950,11 +984,11 @@ textarea {
     }
 
     .timeline ol li div {
-        width: 800px;
+        width: 300px;
         padding: 10px;
-        font-size: 2rem;
+        font-size: 1rem;
         height: auto !important;
-        margin: 0 auto 25px;
+        /* margin: 0 auto 25px; */
         position: static;
     }
 
@@ -968,7 +1002,7 @@ textarea {
         top: 100%;
         transform: translateX(-50%);
         border: none;
-        border-left: 1px solid #0e1963;
+        border-left: 1px solid whitesmoke;
         height: 25px;
     }
 
@@ -982,11 +1016,11 @@ textarea {
     /********************************
     * SECTION COMPETENCES
     ***************************/
-    .container-competences {
-        padding: 100px 0 100px 10%;
+    .content-competences {
+        padding: 50px 0 50px 5%;
         display: grid;
-        grid-template-columns: 750px;
-        grid-template-rows: 100px  100px  100px  100px;
+        grid-template-columns: 300px;
+        grid-template-rows: 100px  100px  100px;
         grid-gap: 50px;
     }
 
@@ -1015,10 +1049,10 @@ textarea {
     * SECTION REALISATIONS
     *********************************/
     .content-realisation {
-        margin: 150px 5%;
+        /* margin: 0 5%; */
         display: grid;
-        grid-template-columns: 850px;
-        grid-template-rows: 785px;
+        grid-template-columns: 300px;
+        grid-template-rows: 250px;
         grid-gap: 25px;
         gap: 25px;
     }
@@ -1038,11 +1072,11 @@ textarea {
     }
 
     .content-contact {
-        margin: 25px 5%;
+        margin: 25px 10%;
         gap: 35px;
         display: grid;
-        grid-template-columns: 200px 550px;
-        grid-template-rows:  50px 50px 200px;
+        grid-template-columns:  250px;
+        grid-template-rows:  50px 50px 50px 50px 50px 50px ;
     }
 
     .form-contact__label {
@@ -1054,7 +1088,7 @@ textarea {
 
     .form-contact__textarea {
         padding: 10px;
-        font-size: 3.5rem;
+        font-size: 1.5rem;
         display: flex;
         justify-content: center;
     }
@@ -1070,22 +1104,25 @@ textarea {
         border: 1px solid;
         resize: none;
         width: 100%;
+        height: 150px;
     }
 
     #btn-confirm {
-        font-size: 1.5rem;
-        width: 250px;
-        padding: 15px;
+        margin: 30px  15px;
+        font-size: 1rem;
+        width: 100px;
         color: #0e1963;
         background-color: whitesmoke;
     }
 
-    .link-social {
-        margin: 50px 10% 0 0;
-        display: flex;
+    .link {
         align-items: center;
         justify-content: center;
-        width: 40%;
-        height: auto;
+        display: flex;
+    }
+
+    .icon {
+        flex-basis: 100px;
+        float: left;
     }
 }
