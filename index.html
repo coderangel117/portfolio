@@ -2,15 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description" content="Mon portfolio en ligne ">
     <meta name="keywords" content="portfolio, etudiant, developpeur">
     <meta name="author" content="Gabriel PERINO">
-    <meta charset="UTF-8">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portfolio">
-    <meta property="og:description" content=" Portfolio en ligne de gabriel PERINO">
+    <meta property="og:description" content=" Portfolio en ligne de Gabriel PERINO, étudiant entrant en bachelor en développement web et applicatif.">
     <meta property="og:url" content="https://www.gabrielperino.com">
+    <meta property="og:image" content="https://www.gabrielperino.com/images/profile-picture.jpg">
     <meta property="og:site_name" content="Portfolio">
     <meta name="twitter:description" content="Portfolio de Gabriel PERINO contact : perino.contact@gmail.com">
     <link rel="icon" href="favicon.ico">
@@ -18,9 +19,10 @@
     <link rel="canonical" href="https://gabrielperino.com/">
     <title> Accueil </title>
 </head>
+<body>
 <header>
     <div class="name"><a href="#">Gabriel PERINO</a></div>
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
     <label class="menu-icon" for="menu-btn">
         <span class="navicon"></span>
     </label>
@@ -33,117 +35,130 @@
     </nav>
 </header>
 
-<body>
+
 <div class="container-propos">
-    <img id="profile-picture" src="images/pdp.jpg" alt="photo de profil">
-    <div id="propos" class="content-propos">
-        <h2> Qui suis-je ?</h2>
-        <p>
-            Je suis étudiant en 2e année de BTS Services Informatiques aux Organisations (SIO) option SLAM
-        </p>
+    <div class="content-propos">
+        <img id="profile-picture" src="images/profile-picture.jpg" alt="photo de profil">
+        <div id="propos" class="propos-description">
+            <h2> Qui suis-je ?</h2>
+            <p>
+                Je suis étudiant en 2e année de BTS Services Informatiques aux Organisations (SIO) option SLAM
+            </p>
+            <a href="documents/cv.pdf">Lien vers mon cv au format PDF </a>
+        </div>
     </div>
 </div>
 
-<section  class="section intro">
+<section class="section intro">
     <div class="container-parcours">
         <h1 id="parcours">Mes formations </h1>
     </div>
 </section>
-
-<section class="timeline">
+<div class="timeline">
     <ol>
+
         <li>
             <div>
-                <time>2017</time> Dès mon année de seconde j'ai commencer à m'interesser aux techologies du web et créer des sites internet
+                <time datetime="2017">2017</time>
+                Dès mon année de seconde j'ai commencer à m'interesser aux technologies du web et créer des sites
+                internet
             </div>
         </li>
         <li>
             <div>
-                <time>2018-2020</time> J'ai effectué un Baccaulauréat STI2D option ITEC que j'ai obtenu avec mention BIEN
+                <time datetime="2018">2018-2020</time>
+                J'ai effectué un Baccaulauréat STI2D option ITEC que j'ai obtenu avec mention BIEN
             </div>
         </li>
         <li>
             <div>
-                <time>2020-2022</time> Lors de ces deux ans, j'ai effectué un BTS SIO option SLAM
+                <time datetime="2020">2020-2022</time>
+                Lors de ces deux ans, j'ai effectué un BTS SIO option SLAM
             </div>
         </li>
         <li>
             <div>
-                <time> À partir de 2022</time> Je commence en octobre un Bachelor en alternance à <a href="https://www.etna.io">l'ETNA</a> pour obtenir le titre de concepteur de projet SI
+                <time datetime="2022"> À partir de 2022</time>
+                Je commence en octobre un Bachelor en alternance à <a href="https://www.etna.io">l'ETNA</a> pour obtenir
+                le titre de concepteur de projet SI
             </div>
         </li>
-        <li></li>
+        <li>
+        </li>
     </ol>
-</section>
-<h1 id="competences">Mes compétences</h1>
+</div>
+
 <div class="container-competences">
+    <h1 id="competences">Mes compétences</h1>
     <div class="content-competences">
-        <div class="tech-name">
-            <p> HTML</p>
-            <p>90%</p>
-        </div>
-        <div class="level-tech">
-            <div class="percent" style="width: 90%;">
+        <div class="competences">
+            <div class="tech-name">
+                <p> HTML</p>
+                <p>90%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 90%;">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content-competences">
-        <div class="tech-name">
-            <p> CSS</p>
-            <p>50%</p>
-        </div>
-        <div class="level-tech">
-            <div class="percent" style="width: 50%;">
+        <div class="competences">
+            <div class="tech-name">
+                <p> CSS</p>
+                <p>50%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 50%;">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content-competences">
-        <div class="tech-name">
-            <p> JS</p>
-            <p>40%</p>
-        </div>
-        <div class="level-tech">
-            <div class="percent" style="width: 40%;">
+        <div class="competences">
+            <div class="tech-name">
+                <p> JS</p>
+                <p>40%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 40%;">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content-competences">
-        <div class="tech-name">
-            <p> PHP</p>
-            <p>75%</p>
-        </div>
-        <div class="level-tech">
-            <div class="percent" style="width: 75%;">
+        <div class="competences">
+            <div class="tech-name">
+                <p> PHP</p>
+                <p>75%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 75%;">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content-competences">
-        <div class="tech-name">
-            <p> SYMFONY</p>
-            <p>50%</p>
-        </div>
-        <div class="level-tech">
-            <div class="percent" style="width: 50%;">
+        <div class="competences">
+            <div class="tech-name">
+                <p> SYMFONY</p>
+                <p>50%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 50%;">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content-competences">
-        <div class="tech-name">
-            <p> MySQL</p>
-            <p>65%</p>
-        </div>
-        <div class="level-tech">
-            <div class="percent" style="width: 65%;">
+        <div class="competences">
+            <div class="tech-name">
+                <p> MySQL</p>
+                <p>65%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 65%;">
+                </div>
             </div>
         </div>
-    </div>
-    <div class="content-competences">
-        <div class="tech-name">
-            <p> C#</p>
-            <p>60%</p>
-        </div>
-        <div class="level-tech">
-            <div class="percent" style="width: 60%;">
+        <div class="competences">
+            <div class="tech-name">
+                <p> C#</p>
+                <p>60%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 60%;">
+                </div>
             </div>
         </div>
     </div>
@@ -152,61 +167,75 @@
     <h1 id="realisations"> Mes Réalisations</h1>
     <div class="content-realisation">
         <div class="a-img-txt">
-            <img class="a-img" src="images/Autofact.png" alt="autofact">
+            <div class="img-realisation">
+                <img class="a-img" src="images/Autofact.png" alt="autofact">
+            </div>
             <span class="a-txt c1">
-      <a href="#"><img src="images/lien.png" alt="details-autofact" title="voir les détails du projet"></a>
-      <a href="https://www.github.com/coderangel117/autofact" title="voir le github du projet "><img src="images/github.png" alt=""></a>
-    </span>
+                <a href="/projets/autofact.html"><img src="images/lien.png" alt="details-autofact"
+                                                      title="voir les détails du projet"></a>
+                <a href="https://www.github.com/coderangel117/autofact" title="voir le github du projet "><img
+                        class="img-realisation" src="images/github.png" alt=""></a>
+            </span>
         </div>
         <div class="a-img-txt">
-            <img class="a-img" src="images/js-batiment.png" alt="js-batiment">
+            <div class="img-realisation">
+                <img class="a-img" src="images/absolumentcanoe.png" alt="absolumentcanoe">
+            </div>
             <span class="a-txt c1">
-      <a href="#"><img src="images/lien.png" alt="details" title="voir les détails du projet"></a>
-      <a href="https://www.github.com/coderangel117/" title="voir le github du projet "><img src="images/github.png" alt=""></a>
-    </span>
+                <a href="projets/absolumentcanoe.html"><img src="images/lien.png" alt="details"
+                                                            title="voir les détails du projet"></a>
+                <a href="https://www.github.com/coderangel117/stage_canoe" title="voir le github du projet "><img
+                        src="images/github.png" alt=""></a>
+            </span>
         </div>
         <div class="a-img-txt">
-            <img class="a-img" src="images/sportludique.jpg" alt="js-batiment">
+            <div class="img-realisation">
+                <img class="a-img" src="images/sportludique.jpg" alt="sportludique">
+            </div>
             <span class="a-txt c1">
-      <a href="#"><img src="images/lien.png" alt="details-sportludique" title="voir les détails du projet"></a>
-      <a href="https://www.github.com/coderangel117/sportludique" title="voir le github du projet "><img src="images/github.png" alt=""></a>
-    </span>
+                <a href="projets/sportludique.html"><img src="images/lien.png" alt="details-sportludique"
+                                                         title="voir les détails du projet"></a>
+                <a href="https://www.github.com/coderangel117/sportludique" title="voir le github du projet "><img
+                        class="img-realisation" src="images/github.png" alt=""></a>
+            </span>
         </div>
     </div>
 </div>
-
-<h1 id="contact">Me Contacter</h1>
-<br> <br>
-<form class="content-contact" method="post">
-    <div class="form-contact__label">
-        <label for="nom">Nom</label>
-    </div>
-    <div class="form-contact__textarea">
-        <input id="nom" type="text">
-    </div>
-    <div class="form-contact__label">
-        <label for="mail">Adresse e-mail</label>
-    </div>
-    <div class="form-contact__textarea">
-        <input type="text" class="form-contact__input" name="mail" id="mail">
-    </div>
-    <div class="form-contact__label">
-        <label for="message">Votre message</label>
-    </div>
-    <div class="form-contact__textarea"> <textarea name="message"  id="message" cols="60" rows="5"></textarea>
-    </div>
-    <button id="btn-confirm">Envoyer</button>
-</form>
+<div class="container-contact">
+    <h1 id="contact">Me Contacter</h1>
+    <form class="content-contact" method="post">
+        <div class="form-contact__label">
+            <label for="nom">Nom</label>
+        </div>
+        <div class="form-contact__textarea">
+            <input id="nom" type="text">
+        </div>
+        <div class="form-contact__label">
+            <label for="mail">Adresse e-mail</label>
+        </div>
+        <div class="form-contact__textarea">
+            <input type="text" class="form-contact__input" name="mail" id="mail">
+        </div>
+        <div class="form-contact__label">
+            <label for="message">Votre message</label>
+        </div>
+        <div class="form-contact__textarea"><textarea name="message" id="message" cols="60" rows="5"></textarea>
+        </div>
+        <br>
+        <button id="btn-confirm">Envoyer</button>
+    </form>
     <div class="link">
         <div class="icon">
-            <a href="https://www.linkedin.com/in/gabriel-perino-69a0111b6/?originalSubdomain=fr"><img class=" social" src="images/linkedin.png" alt="linkedin logo"> </a>
+            <a href="https://www.linkedin.com/in/gabriel-perino-69a0111b6/?originalSubdomain=fr"><img class=" social" src="images/linkedin.png" alt="linkedin logo">
+            </a>
         </div>
         <div class="icon">
-            <a href="https://www.github.com/coderangel117/"><img class=" social" src="images/github.png"  alt="github"></a>
+            <a href="https://www.github.com/coderangel117/"><img class=" social" src="images/github.png" alt="github"></a>
         </div>
         <div class="icon">
-            <a href="mailto:perino.contact@gmail.com?subject=Mail from online portfolio"><img class=" social" src="images/mail.png"  alt="mail"></a>
+            <a href="mailto:perino.contact@gmail.com?subject=Mail-portfolio"><img class=" social" src="images/mail.png" alt="mail"></a>
         </div>
     </div>
+</div>
 </body>
 </html>
