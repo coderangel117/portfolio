@@ -4,43 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Mon portfolio en ligne ">
-    <meta name="keywords" content="portfolio, etudiant, developpeur">
+    <meta name="keywords" content="portfolio, étudiant, developpeur">
     <meta name="author" content="Gabriel PERINO">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/projects.css">
     <meta charset="UTF-8">
-    <link rel="canonical" href="https://gabrielperino.com/">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Portfolio">
-    <meta property="og:description" content=" Portfolio en ligne de gabriel PERINO">
-    <meta property="og:url" content="https://www.gabrielperino.com">
+    <meta property="og:url" content="https://www.gabrielperino.com/sportludique.html">
     <meta property="og:site_name" content="Portfolio">
-    <meta name="twitter:description"
-        content="Portfolio de Gabriel PERINO contact : perino.contact@gmail.com">
-    <title> Projets-Sportludique </title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/projects.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title> Projet sportludique </title>
 </head>
-<header class="flex-container">
-    <div class="flex-items__title">
-        <h1> Gabriel PERINO</h1>
-    </div>
-    <div class="flex-items__parts">
-        <a href="../index.html#propos">A propos</a>
-    </div>
-    <div class="flex-items__parts">
-        <a href="../index.html#parcours">Parcours</a>
-    </div>
-    <div class="flex-items__parts">
-        <a href="../index.html#competences">Compétences</a>
-    </div>
-    <div class="flex-items__parts">
-        <a href="../index.html#contact">Contact</a>
-    </div>
-    <div class="flex-items__parts">
-        <a href="../index.html#realisations"> Réalisations</a>
-    </div>
-</header>
 <body>
-    <img class="img-project" src="../images/sportludique.jpg" alt="sportludique image">
+<header>
+    <div class="name"><a href="#">Gabriel PERINO</a></div>
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span>
+    </label>
+    <nav class='menu'>
+        <a class='nav-item' href="../index.html#propos">A propos</a>
+        <a class='nav-item' href="../index.html#parcours">Parcours</a>
+        <a class='nav-item' href="../index.html#competences">Compétences</a>
+        <a class='nav-item' href="../index.html#realisations">Réalisations</a>
+        <a class='nav-item' href="../index.html#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="desc">
+    <h1>
+        Projet Sportludique
+    </h1>
+    <img class="img-project" src="../images/sportludique.jpg" alt="screenshot autofact">
+
+    <h2>Description</h2>
+    <p>
+        C'est une site internet d'e-commerce de vente de vélo et autre article de sport.
+
+    </p>
+
+    <h2>
+        Outils et technologies utilisés
+    </h2>
+    <ul>
+        <li><p> IDE : PHPStorm / Visual Studio Code</p></li>
+        <li><p> Langage : PHP</p></li>
+        <li><p> Framework utilisé : Symfony</p></li>
+    </ul>
+    <h2>
+        Liens externes
+    </h2>
+    <ul>
+        <li><a href="https://www.github.com/coderangel117/sportludique">
+            <img class="social" src="../images/github.png" alt="depôt github du projet" title="depôt github du projet"></a>
+        </li>
+    </ul>
+</div>
+<div class="container-realisation">
+    <h1 id="realisations"> Les différentes fonctionnalités</h1>
+    <div class="content-fonctionnality">
+        <div class="a-img-txt">
+            <div class="img-realisation">
+                <img src="../images/sportludique-login.jpg" alt="capture d'écran de connexion">
+            </div>
+            <span class="a-txt"> <p> La création de compte et la connexion</p></span>
+        </div>
+        <div class="a-img-txt">
+            <div class="img-realisation">
+                <img src="../images/sportludique-cart.jpg" alt="capture d'écran du panier">
+            </div>
+            <span class="a-txt c1"><p>La création de panier et la gestion des articles <p></span>
+        </div>
+    </div>
+</div>
 </body>
 </html>
