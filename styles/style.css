@@ -424,8 +424,8 @@ textarea {
     position: relative;
     font-size: 25px;
     padding: 15px;
-    margin: 0 350px;
-    width: 250px;
+    margin: 50px 100px;
+    width: 350px;
     color: #0e1963;
     background-color: whitesmoke;
 }
