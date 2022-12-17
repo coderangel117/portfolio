@@ -215,7 +215,6 @@ ol {
     font-size: 1rem;
     white-space: normal;
     color: var(--all-color);
-    /* background-color: beige; */
 
 }
 
@@ -230,7 +229,6 @@ ol {
 }
 
 .timeline ol li:nth-child(odd) div {
-    /* border: 1px solid #0e1963; */
     top: -16px;
     transform: translateY(-100%);
 }
@@ -384,7 +382,7 @@ a {
     gap: 35px;
     display: grid;
     grid-template-columns: 300px 550px;
-    grid-template-rows:  50px 50px 200px;
+    grid-template-rows:  50px 50px 50px 200px;
 }
 
 .form-contact__label {
@@ -668,7 +666,7 @@ textarea {
         gap: 50px;
         display: grid;
         grid-template-columns: 250px 400px;
-        grid-template-rows:  50px 50px 200px;
+        grid-template-rows:  50px 50px 50px 200px;
     }
 
     .form-contact__label {
@@ -775,7 +773,7 @@ textarea {
         gap: 50px;
         display: grid;
         grid-template-columns: 250px 300px;
-        grid-template-rows:  50px 50px 200px;
+        grid-template-rows:  50px 50px 50px 200px;
     }
 
     .form-contact__label {
@@ -809,7 +807,7 @@ textarea {
     }
 
     #btn-confirm {
-        margin: 0 350px;
+        margin: auto;
         font-size: 15px;
         width: 200px;
         padding: 15px;
@@ -1072,7 +1070,7 @@ textarea {
     }
 
     .content-contact {
-        margin: 25px 10%;
+        margin: 50px 10%;
         gap: 35px;
         display: grid;
         grid-template-columns:  250px;
@@ -1080,7 +1078,7 @@ textarea {
     }
 
     .form-contact__label {
-        font-size: 2rem;
+        font-size: 1.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1108,9 +1106,9 @@ textarea {
     }
 
     #btn-confirm {
-        margin: 30px  15px;
+        margin: auto;
         font-size: 1rem;
-        width: 100px;
+        width: 200px;
         color: #0e1963;
         background-color: whitesmoke;
     }
