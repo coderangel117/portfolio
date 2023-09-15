@@ -3,8 +3,8 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // On vérifie si le champ "recaptcha-response" contient une valeur
     if (empty($_POST['recaptcha-response'])) {
-        var_dump($_POST['recaptcha-response']);
-        echo "empty post response";
+        header('Location: index.html');
+
     } else {
         // On prépare l'URL
         $url = "https://www.google.com/recaptcha/api/siteverify?secret=6LdZZCooAAAAAALpkddMatKj84lyv091TcfEEj87&response={$_POST['recaptcha-response']}";
@@ -40,27 +40,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $message = htmlspecialchars($_POST['message']);
 
 
-                    if (filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
+                    if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
                         $regex = '/^[a-zA-Z0-9+_.-]+@gabrielperino.com+$/';
-                        $match = preg_match($regex, $_POST['mail']);
+                        $match = preg_match($regex, $_POST['email']);
                         if (!$match) {
                             $retour = mail('perino.contact@gmail.com',
                                 'Formulaire de contact rempli',
-                                "L'utilisateur :" . $_POST['mail'] . "\r\n vous a contacté au sujet de : " . $_POST['subject'] . "\r\n Voici son message : " . $_POST['message'],
-                                "from:webmaster@gabrielperino.com" . "\r\n" . $_POST['mail']);
-                            echo "Done";
+                                "L'utilisateur :" . $_POST['email'] . "\r\n vous a contacté au sujet de : " . $_POST['sujet'] . "\r\n Voici son message : " . $_POST['message'],
+                                "from:webmaster@gabrielperino.com" . "\r\n" . $_POST['email']);
+                            header('Location: index.html');
+
+                        } else {
+                            header('Location: index.html');
+
                         }
-                    }
-                    else{
-                        echo "mail non valide ";
+
+                    } else {
+                        header('Location: index.html');
                     }
 
-                }
-                else{
-                    echo "Formulaire vide ";
+                } else {
+                    header('Location: index.html');
                 }
             } else {
-                var_dump($data);
+                header('Location: index.html');
             }
         }
     }
