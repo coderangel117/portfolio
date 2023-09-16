@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description" content="Mon portfolio en ligne ">
-    <meta name="keywords" content="portfolio, etudiant, developpeur">
+    <meta name="keywords" content="portfolio, étudiant, developpeur">
     <meta name="author" content="Gabriel PERINO">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portfolio">
-    <meta property="og:description" content=" Portfolio en ligne de Gabriel PERINO, étudiant entrant en bachelor en développement web et applicatif.">
+    <meta property="og:description"
+          content=" Portfolio en ligne de Gabriel PERINO, étudiant en bachelor en développement web et applicatif.">
     <meta property="og:url" content="https://www.gabrielperino.com">
     <meta property="og:image" content="https://www.gabrielperino.com/images/profile-picture.jpg">
     <meta property="og:site_name" content="Portfolio">
@@ -49,44 +50,45 @@
     </div>
 </div>
 
-<section class="section intro">
+<section class="section">
     <div class="container-parcours">
         <h1 id="parcours">Mes formations </h1>
     </div>
+
+    <div class="timeline">
+        <ol>
+
+            <li>
+                <div>
+                    <time datetime="2017">2017</time>
+                    Mon année de seconde marque le début de mon intérêt pour les technologies du web.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time datetime="2018">2018-2020</time>
+                    J'ai effectué un Baccaulauréat STI2D option ITEC que j'ai obtenu avec mention BIEN
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time datetime="2020">2020-2022</time>
+                    Lors de ces deux ans, j'ai effectué un BTS SIO option SLAM
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time datetime="2022"> À partir d'octobre 2022</time>
+                    J'ai commencé en octobre un Bachelor en alternance à
+                    <a href="https://www.etna.io">l'ETNA</a> pour obtenir
+                    le diplôme BAC +3 de concepteur de projet SI.
+                </div>
+            </li>
+            <li>
+            </li>
+        </ol>
+    </div>
 </section>
-<div class="timeline">
-    <ol>
-
-        <li>
-            <div>
-                <time datetime="2017">2017</time>
-                Mon année de seconde marque le début de mon intérêt pour les technologies du web.
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2018">2018-2020</time>
-                J'ai effectué un Baccaulauréat STI2D option ITEC que j'ai obtenu avec mention BIEN
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2020">2020-2022</time>
-                Lors de ces deux ans, j'ai effectué un BTS SIO option SLAM
-            </div>
-        </li>
-        <li>
-            <div>
-                <time datetime="2022"> À partir de 2022</time>
-                J'ai commencé en octobre un Bachelor en alternance à <a href="https://www.etna.io">l'ETNA</a> pour obtenir
-                le titre de concepteur de projet SI.
-            </div>
-        </li>
-        <li>
-        </li>
-    </ol>
-</div>
-
 <div class="container-competences">
     <h1 id="competences">Mes compétences</h1>
     <div class="content-competences">
@@ -192,10 +194,12 @@
                 <img class="a-img" src="images/sportludique.jpg" alt="sportludique">
             </div>
             <span class="a-txt c1">
-                <a href="projets/sportludique.html"><img src="images/lien.png" alt="details-sportludique"
-                                                         title="voir les détails du projet"></a>
-                <a href="https://www.github.com/coderangel117/sportludique" title="voir le github du projet "><img
-                        class="img-realisation" src="images/github.png" alt=""></a>
+                <a href="projets/sportludique.html">
+                    <img src="images/lien.png" alt="details-sportludique" title="voir les détails du projet">
+                </a>
+                <a href="https://www.github.com/coderangel117/sportludique" title="voir le github du projet ">
+                    <img class="img-realisation" src="images/github.png" alt="github-sportludique">
+                </a>
             </span>
         </div>
     </div>
@@ -207,42 +211,58 @@
             <label for="nom">Nom</label>
         </div>
         <div class="form-contact__textarea">
-            <input id="nom" name="nom"  required type="text">
+            <input id="nom" name="nom" required type="text">
         </div>
         <div class="form-contact__label">
-            <label for="subject">Sujet du message</label>
+            <label for="sujet">Sujet du message</label>
         </div>
         <div class="form-contact__textarea">
-            <input type="text" class="form-contact__input" required name="subject" id="subject">
+            <input type="text" class="form-contact__input" required name="sujet" id="sujet">
         </div>
 
         <div class="form-contact__label">
-            <label for="mail">Adresse e-mail</label>
+            <label for="email">Adresse e-mail</label>
         </div>
         <div class="form-contact__textarea">
-            <input type="email" class="form-contact__input" required name="mail" id="mail">
+            <input type="email" class="form-contact__input" required name="email" id="email">
         </div>
         <div class="form-contact__label">
             <label for="message">Votre message</label>
         </div>
         <div class="form-contact__textarea">
-            <textarea name="message" id="message" cols="60" rows="5" required ></textarea>
+            <textarea name="message" id="message" cols="60" rows="5" required></textarea>
         </div>
         <br>
+        <input type="hidden" id="recaptchaResponse" name="recaptcha-response">
         <button name="envoyer" id="btn-confirm">Envoyer</button>
     </form>
+    <div id="result"></div>
+
     <div class="link">
         <div class="icon">
-            <a href="https://www.linkedin.com/in/gabriel-perino-69a0111b6/?originalSubdomain=fr"><img class=" social" src="images/linkedin.png" alt="linkedin logo">
+            <a href="https://www.linkedin.com/in/gabriel-perino-69a0111b6/?originalSubdomain=fr"><img class=" social"
+                                                                                                      src="images/linkedin.png"
+                                                                                                      alt="logo_linkedin">
             </a>
         </div>
         <div class="icon">
-            <a href="https://www.github.com/coderangel117/"><img class=" social" src="images/github.png" alt="github"></a>
+            <a href="https://www.github.com/coderangel117/"><img class=" social" src="images/github.png"
+                                                                 alt="logo_github"></a>
         </div>
         <div class="icon">
-            <a href="mailto:perino.contact@gmail.com?subject=Mail-portfolio"><img class=" social" src="images/mail.png" alt="mail"></a>
+            <a href="mailto:perino.contact@gmail.com?subject=Mail-portfolio"><img class=" social" src="images/mail.png"
+                                                                                  alt="mail"></a>
         </div>
     </div>
 </div>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdZZCooAAAAAOeu3tvo644Jw4U0ZomQhIS647yW"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LdZZCooAAAAAOeu3tvo644Jw4U0ZomQhIS647yW', {action: 'homepage'}).then(function (token) {
+            document.getElementById('recaptchaResponse').value = token
+        });
+    });
+</script>
+
 </body>
 </html>

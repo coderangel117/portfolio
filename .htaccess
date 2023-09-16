@@ -1,2 +1,6 @@
 Options -Indexes
 ErrorDocument 404 /index.html
+# Redirection vers HTTPS
+RewriteCond %{SERVER_PORT} ^80$ [OR]
+RewriteCond %{HTTPS} =off
+RewriteRule ^(.*)$ https://gabrielperino.com/$1 [R=301,L]
