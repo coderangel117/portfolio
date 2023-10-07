@@ -48,25 +48,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     "from:webmaster@gabrielperino.com" . "\r\n" . $_POST['email']);
                                 header('Location: /');
                             } else {
-                                header('Location: index.html');
+                                header('Location: inex.html');
                             }
                         } else {
-                            header('Location: index.html');
+                            header('Location: idex.html');
                         }
                     } else {
-                        header('Location: index.html');
+                        header('Location: indexhtml');
                     }
                 } else {
-                    header('Location: index.html');
+                    header('Location: ndex.html');
                 }
             } else {
-                header('Location: index.html');
+                header('Location: indx.html');
             }
         } else {
-            header('Location: index.html');
+            header('Location: inde.html');
         }
     } else {
-        header('Location: index.html');
+        header('Location: index.hml');
     }
 } else {
     http_response_code(405);
