@@ -268,5 +268,13 @@
         </div>
     </div>
 </div>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdZZCooAAAAAOeu3tvo644Jw4U0ZomQhIS647yW"></script>
+<script>
+    grecaptcha.ready(function () {
+        grecaptcha.execute('6LdZZCooAAAAAOeu3tvo644Jw4U0ZomQhIS647yW', {action: 'homepage'}).then(function (token) {
+            document.getElementById('recaptchaResponse').value = token
+        });
+    });
+</script>
 </body>
 </html>
