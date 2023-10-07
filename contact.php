@@ -1,5 +1,8 @@
 <?php
-
+$nom = $_POST['nom'];
+$sujet = $_POST['sujet'];
+$email = $_POST['email'];
+$message = $_POST['message'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // On vérifie si le champ "recaptcha-response" contient une valeur
     if (!empty($_POST['recaptcha-response'])) {
@@ -28,24 +31,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $data = json_decode($response);
                 if ($data->success) {
                     if (
-                        !empty($_POST['nom']) &&
-                        !empty($_POST['sujet']) &&
-                        !empty($_POST['email']) &&
-                        !empty($_POST['message'])
+                        !empty($nom ) &&
+                        !empty($sujet ) &&
+                        !empty($email) &&
+                        !empty($message)
                     ) {
                         // On nettoie le contenu
-                        $nom = strip_tags($_POST['nom']);
-                        $sujet = strip_tags($_POST['sujet']);
-                        $email = strip_tags($_POST['email']);
-                        $message = htmlspecialchars($_POST['message']);
-                        if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+                        $nom = strip_tags($nom );
+                        $sujet = strip_tags($sujet );
+                        $email = strip_tags($email);
+                        $message = htmlspecialchars($message);
+                        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                             $regex = '/^[a-zA-Z0-9+_.-]+@gabrielperino.com+$/';
-                            $match = preg_match($regex, $_POST['email']);
+                            $match = preg_match($regex, $email);
                             if (!$match) {
                                 $retour = mail('perino.contact@gmail.com',
                                     'Formulaire de contact rempli',
-                                    "L'utilisateur :" . $_POST['email'] . "\r\n vous a contacté au sujet de : " . $_POST['sujet'] . "\r\n Voici son message : " . $_POST['message'],
-                                    "from:webmaster@gabrielperino.com" . "\r\n" . $_POST['email']);
+                                    "L'utilisateur :" . $email . "\r\n vous a contacté au sujet de : " . $sujet . "\r\n
+                                     Voici son message : " . $message,
+                                    "from:webmaster@gabrielperino.com" . "\r\n" . $email);
                                 header('Location: /');
                             } else {
                                 header('Location: index.html');
