@@ -1,8 +1,8 @@
 <?php
-$nom = $_POST['nom'];
-$sujet = $_POST['sujet'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+$nom = htmlspecialchars($_POST['nom']);
+$sujet = htmlspecialchars($_POST['sujet']);
+$email = htmlspecialchars($_POST['email']);
+$message = htmlspecialchars($_POST['message']);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 // On vérifie si le champ "recaptcha-response" contient une valeur
     if (!empty($_POST['recaptcha-response'])) {
