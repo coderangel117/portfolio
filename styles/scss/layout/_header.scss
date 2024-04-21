@@ -1,0 +1,252 @@
+.icon {
+  width: 150px;
+  height: 150px;
+}
+
+
+.name {
+  background-color: transparent;
+  float: left;
+  margin: 0 15px;
+  font-size: 24px;
+  line-height: 26px;
+  padding: 10px;
+}
+
+header {
+  z-index: 1;
+  width: 100%;
+  background-color: var(--odd-background-color);
+  margin-top: 0;
+  position: fixed;
+}
+
+/* Adapted from https://codepen.io/mutedblues/pen/MmPNPG */
+
+header > * {
+  flex-grow: 1;
+}
+
+header a {
+  text-decoration: none;
+}
+
+/* "Hide" checkbox -- moves it off screen*/
+#menu-btn {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+
+/* Hide hamburger for bigger screens */
+.menu-icon {
+  visibility: hidden;
+}
+
+.menu {
+  font-size: 24px;
+  line-height: 25px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 2rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+
+
+  a {
+    grid-area: title;
+  }
+
+  .name {
+    /*display: none;*/
+    margin: 0 5px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    grid-area: hamburger;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 30px 40px 30px 0;
+    position: relative;
+    user-select: none;
+    visibility: visible;
+  }
+
+  .navicon {
+    background: var(--all-color);
+    display: block;
+    height: 2px;
+    width: 30px;
+    position: relative;
+  }
+
+  .navicon:before {
+    top: 10px;
+  }
+
+  .navicon:after {
+    top: -10px;
+  }
+
+  .navicon:before, .navicon:after {
+    background: var(--all-color);
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    transition: all .2s ease-out;
+  }
+
+  .menu {
+    z-index: 1;
+    grid-area: nav;
+    justify-content: center;
+    max-height: 0;
+    transition: max-height .6s ease-out;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: var(--odd-background-color);
+    display: flex;
+    flex-direction: column;
+
+    a {
+      color: var(--all-color);
+      background-color: var(--odd-background-color);
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+
+  .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before,
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    top: 0;
+  }
+}
+
+
+@media screen and (max-device-width: 650px) {
+
+
+  a {
+    grid-area: title;
+  }
+
+  .name {
+    font-size: 20px;
+    line-height: 48px;
+    padding: 20px;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-icon {
+    grid-area: hamburger;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 50px 0;
+    position: relative;
+    user-select: none;
+    visibility: visible;
+  }
+
+  .navicon {
+    display: block;
+    height: 2px;
+    width: 80px;
+    position: relative;
+  }
+
+  .navicon:before {
+    top: 20px;
+  }
+
+  .navicon:after {
+    top: -20px;
+  }
+
+  .navicon:before, .navicon:after {
+    display: block;
+    content: '';
+    position: absolute;
+    transition: all .2s ease-out;
+  }
+
+  .menu {
+    overflow: scroll;
+    font-size: 2rem;
+    line-height: 40px;
+    transition: max-height .6s ease-out;
+    display: flex;
+    margin-left: 50px;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      border: transparent;
+    }
+  }
+
+
+  .menu-btn:checked ~ .menu {
+    max-height: 280px;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .navicon:before,
+  .menu-btn:checked ~ .menu-icon .navicon:after {
+    top: 0;
+  }
+}

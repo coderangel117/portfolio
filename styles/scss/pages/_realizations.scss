@@ -1,0 +1,113 @@
+
+.container-realisation {
+  background-color: var(--odd-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .content-realisation {
+    width: calc(250px * 2 + 50px * 2);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+
+    .a-img-txt > * {
+      grid-area: 1/1/-1/-1;
+    }
+
+    .a-img-txt:hover .a-img {
+      filter: invert(0);
+    }
+
+    .a-img-txt {
+      width: 250px;
+      margin: 25px;
+      user-select: none;
+      display: grid;
+
+      img {
+        user-select: none;
+        width: 100%;
+        height: auto;
+      }
+
+
+      .a-txt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--all-color);
+        opacity: 0;
+        filter: invert(0); /* antibug si effet sur a-img */
+        transition: opacity 3s;
+      }
+
+      .a-txt:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1300px) {
+
+  .content-realisation {
+    margin: 0 5%;
+    padding: 25px 0;
+    display: grid;
+    grid-template-columns: 350px 350px;
+    grid-template-rows: 250px 250px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+  .container-realisation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    .content-realisation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .a-img {
+      width: 500px;
+      height: 275px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 650px) {
+
+  .container-realisation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .content-realisation {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .a-img {
+      width: 350px;
+      height: 200px;
+    }
+  }
+}

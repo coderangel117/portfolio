@@ -1,0 +1,59 @@
+:root {
+  --even-background-color: whitesmoke;
+  --odd-background-color: #eee;
+  --all-color: #0e1963;
+  --link-hover-color: #0e1963;
+  --body-selection-color: #0e1963;
+  --body-selection-background-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --odd-background-color: #222;
+    --even-background-color: #333;
+    --all-color: #aaa;
+    --link-hover-color: #888;
+    --body-selection-color: #fff;
+    --body-selection-background-color: #0e1963;
+  }
+}
+
+*,
+*::before,
+*::after {
+  color: var(--all-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+}
+
+*::selection {
+  background-color: var(--body-selection-background-color);
+  color: var(--body-selection-color);
+}
+
+
+h1 {
+  font-family: lemonmilk, serif;
+  font-size: 48px;
+  text-align: center;
+}
+
+li {
+  list-style-type: none; /* remove the blck circle before the text */
+}
+
+p {
+  font-size: x-large
+}
+
+a :hover {
+  background-color: var(--link-hover-color);
+}
+
+a {
+  color: var(--all-color);
+  text-decoration: none;
+}
