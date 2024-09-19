@@ -1,4 +1,4 @@
-:root {
+.theme-light {
   --even-background-color: whitesmoke;
   --odd-background-color: #eee;
   --all-color: #0e1963;
@@ -7,16 +7,14 @@
   --body-selection-background-color: #fff;
 }
 
-//@media (prefers-color-scheme: dark) {
-//  :root {
-//    --odd-background-color: #222;
-//    --even-background-color: #333;
-//    --all-color: #aaa;
-//    --link-hover-color: #888;
-//    --body-selection-color: #fff;
-//    --body-selection-background-color: #0e1963;
-//  }
-//}
+.theme-dark {
+  --odd-background-color: #222;
+  --even-background-color: #333;
+  --all-color: #aaa;
+  --link-hover-color: #888;
+  --body-selection-color: #fff;
+  --body-selection-background-color: #0e1963;
+}
 
 *, {
   color: var(--all-color);
@@ -24,7 +22,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
+
 }
 
 *::selection {
@@ -40,16 +38,13 @@ h1 {
 }
 
 li {
-  list-style-type: none; /* remove the blck circle before the text */
+  list-style-type: none;
 }
 
 p {
   font-size: x-large
 }
 
-//a :hover {
-//  background-color: var(--link-hover-color);
-//}
 
 a {
   color: var(--all-color);

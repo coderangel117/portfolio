@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="theme-dark">
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Portfolio">
     <meta property="og:description"
-          content=" Portfolio en ligne de Gabriel PERINO, étudiant en bachelor en développement web et applicatif.">
+            content=" Portfolio en ligne de Gabriel PERINO, étudiant en bachelor en développement web et applicatif.">
     <meta property="og:url" content="https://www.gabrielperino.com">
     <meta property="og:image" content="https://www.gabrielperino.com/images/profile-picture.jpg">
     <meta property="og:site_name" content="Portfolio">
@@ -23,7 +23,7 @@
 </head>
 <body>
 
-<header>
+<div class="sidebar">
     <div class="icons">
         <a href="#propos" class="link">
             <i class="fa anchor fa-thin fa-user"></i>
@@ -31,19 +31,26 @@
         </a>
         <a href="#parcours" class="link">
             <i class="fa anchor fa-thin fa-file"></i>
-                <span>Resume</span>
-            </a>
+            <span>Resume</span>
+        </a>
         <a href="#realisations" class="link">
             <i class="fa anchor fa-thin fa-book"></i>
-                <span>Portfolio</span>
-            </a>
+            <span>Portfolio</span>
+        </a>
         <a href="#contact" class="link">
             <i class="fa anchor fa-thin fa-envelope"></i>
             <span>Contact</span>
         </a>
     </div>
-</header>
-
+</div>
+<!--<header>-->
+<!--    <div class="title">-->
+<!--        Gabriel PERINO-->
+<!--    </div>-->
+<!--    <button id="ThemeButton" class="dark">-->
+<!--        <img src="images/icon-sun.svg" alt="theme">-->
+<!--    </button>-->
+<!--</header>-->
 
 <div class="container-propos">
     <div class="content-propos">
@@ -103,73 +110,71 @@
         </div>
     </div>
 </section>
-<section>
-    <div class="container-competences">
-        <h1 id="competences">Mes compétences</h1>
-        <div class="content-competences">
-            <div class="competences">
-                <div class="tech-name">
-                    <p> HTML</p>
-                    <p>90%</p>
-                </div>
-                <div class="level-tech">
-                    <div class="percent" style="width: 90%;">
-                    </div>
+<div class="container-competences">
+    <h1 id="competences">Mes compétences</h1>
+    <div class="content-competences">
+        <div class="competences">
+            <div class="tech-name">
+                <p> HTML</p>
+                <p>90%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 90%;">
                 </div>
             </div>
-            <div class="competences">
-                <div class="tech-name">
-                    <p> CSS</p>
-                    <p>50%</p>
-                </div>
-                <div class="level-tech">
-                    <div class="percent" style="width: 50%;">
-                    </div>
+        </div>
+        <div class="competences">
+            <div class="tech-name">
+                <p> CSS</p>
+                <p>50%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 50%;">
                 </div>
             </div>
-            <div class="competences">
-                <div class="tech-name">
-                    <p> JS</p>
-                    <p>40%</p>
-                </div>
-                <div class="level-tech">
-                    <div class="percent" style="width: 40%;">
-                    </div>
+        </div>
+        <div class="competences">
+            <div class="tech-name">
+                <p> JS</p>
+                <p>40%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 40%;">
                 </div>
             </div>
-            <div class="competences">
-                <div class="tech-name">
-                    <p> PHP</p>
-                    <p>75%</p>
-                </div>
-                <div class="level-tech">
-                    <div class="percent" style="width: 75%;">
-                    </div>
+        </div>
+        <div class="competences">
+            <div class="tech-name">
+                <p> PHP</p>
+                <p>75%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 75%;">
                 </div>
             </div>
-            <div class="competences">
-                <div class="tech-name">
-                    <p> SYMFONY</p>
-                    <p>50%</p>
-                </div>
-                <div class="level-tech">
-                    <div class="percent" style="width: 50%;">
-                    </div>
+        </div>
+        <div class="competences">
+            <div class="tech-name">
+                <p> SYMFONY</p>
+                <p>50%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 50%;">
                 </div>
             </div>
-            <div class="competences">
-                <div class="tech-name">
-                    <p> MySQL</p>
-                    <p>65%</p>
-                </div>
-                <div class="level-tech">
-                    <div class="percent" style="width: 65%;">
-                    </div>
+        </div>
+        <div class="competences">
+            <div class="tech-name">
+                <p> MySQL</p>
+                <p>65%</p>
+            </div>
+            <div class="level-tech">
+                <div class="percent" style="width: 65%;">
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
 <div class="container-realisation">
     <h1 id="realisations"> Mes Réalisations</h1>
     <div class="content-realisation">
@@ -181,7 +186,7 @@
                 <!--<a href="projets/autofact.html"><img src="images/lien.png" alt="details-autofact"-->
                 <!--                                     title="voir les détails du projet"></a>-->
                 <a href="https://www.github.com/coderangel117/autofact" title="voir le github du projet "><img
-                    class="img-realisation" src="images/github.png" alt="github link"></a>
+                        class="img-realisation" src="images/github.png" alt="github link"></a>
             </span>
         </div>
         <div class="a-img-txt">
@@ -192,7 +197,7 @@
                 <!--<a href="projets/absolumentcanoe.html"><img src="images/lien.png" alt="details"-->
                 <!--                                            title="voir les détails du projet"></a>-->
                 <a href="https://www.github.com/coderangel117/stage_canoe" title="voir le github du projet "><img
-                    src="images/github.png" alt=""></a>
+                        src="images/github.png" alt=""></a>
             </span>
         </div>
         <div class="a-img-txt">
