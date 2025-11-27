@@ -1,0 +1,67 @@
+---
+import {ArrowDown, Download} from "@lucide/astro";
+---
+<section class="relative min-h-screen w-full mx-auto flex items-center">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0c56e9]/10 via-white to-[#9311d4]/10 -z-10"/>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.15),transparent_50%)] -z-10"/>
+    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-chart-2/10 -z-10"/>
+    <div class="fixed top-0 right-0 left-0  max-w-6xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+        <div class="text-lg font-semibold">Portfolio</div>
+        <nav class='flex justify-center gap-6 text-sm'>
+            <a href="#hero" target="_blank">Accueil</a>
+            <a href="#cursus" target="_blank">Parcours</a>
+            <a href="#project" target="_blank">Réalisations</a>
+            <a href="#stack" target="_blank">Technologie</a>
+            <a href="#contact" target="_blank">Contact</a>
+        </nav>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 md:px-6 py-10 md:py-24 w-full">
+        <div class="flex flex-col md:flex-row items-center md:items-center gap-8 md:gap-24">
+            <div class="flex-1 space-y-6 flex-col w-3xl">
+                <div class=" my-8 text-[#0c56e9] px-4 py-2 text-sm font-medium border border-[#0c56e9]/20 rounded-full bg-[#0c56e9]/10 max-w-2xs">
+                    Disponible
+                    pour de nouveaux projets
+                </div>
+                <div class="text-4xl sm:text-5xl md:text-7xl
+                        font-bold tracking-tight
+                        bg-gradient-to-r from-[#171717] via-[#0c56e9]  to-[#9311d4] bg-clip-text text-transparent">
+                    Gabriel Perino
+                </div>
+                <p class="text-xl sm:text-2xl md:text-3xl font-semibold">Développeur Backend</p>
+                <div class=" text-base md:text-lg max-w-xl mx-auto md:mx-0">Passionné par les architectures robustes
+                    et
+                    évoluant
+                    vers le développement fullstack.
+                    Spécialisé en PHP, Typescript, Mariadb, Angular
+                </div>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start gap-4 pt-4">
+                    <a class="bg-[#0c56e9] px-6 py-3 border text-white font-medium rounded-md max-w-xs"
+                       href="#contact" target="_blank">Me contacter
+                    </a>
+                    <a class="px-6 py-3 rounded-md font-medium border border-[#e1e1e1] max-w-2xs"
+                       href="#projet" target="_blank">Voir mes projets
+                    </a>
+                    <a class="px-6 py-3 rounded-md flex font-medium border-2 border-[#0c56e9]/20 max-w-xs flex items-center gap-2"
+                       href="src/assets/cv.pdf" target="_blank">
+                        <Download/>
+                        Télécharger mon CV
+                    </a>
+                </div>
+            </div>
+            <div class="flex-shrink-0 relative">
+                <div class="absolute -inset-4 bg-gradient-to-r from-[#0c56e9]/30 to-[#9311d4]/30 rounded-lg blur-2xl opacity-50"></div>
+                <div class="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 rounded-lg overflow-hidden border-2 border-[#0c56e94d] shadow-2xl">
+                    <img class="w-full h-full object-cover" src="src/assets/profile-picture.jpg"
+                         alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center animate-bounce">
+            <div class="relative mt-16 md:mt-24 h-12 text-sm font-medium">Découvrir mon parcours</div>
+            <span class="absolute bottom-0 w-5 h-5">
+                <ArrowDown/>
+            </span>
+
+        </div>
+    </div>
+</section>
