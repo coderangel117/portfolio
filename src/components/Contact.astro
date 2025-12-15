@@ -1,20 +1,22 @@
 ---
+import {Mail, Linkedin, Github} from '@lucide/astro';
 ---
-<div id="contact" class="container-contact">
-    <div class="link">
-        <div class="icon">
+<section id="contact" class=" py-12 md:py-24 relative w-full mx-auto flex flex-col  items-center">
+    <div class="">
+        <div class="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 md:mb-12 text-center bg-gradient-to-r
+        from-[#171717] to-[#1e2aff] bg-clip-text text-transparent">
+            Contact
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-8">
             <a href="https://www.linkedin.com/in/gabriel-perino-69a0111b6/">
-                <img class=" social" src="public/images/linkedin.png" alt="logo_linkedin">
+                <Linkedin/>
             </a>
-        </div>
-        <div class="icon">
             <a href="https://www.github.com/coderangel117/">
-                <img class=" social" src="public/images/github.png" alt="logo_github">
+                <Github/>
             </a>
-        </div>
-        <div class="icon">
-            <a href="mailto:perino.contact@gmail.com?subject=Mail-portfolio">
-                <img class=" social" src="public/images/mail.png" alt="mail"></a>
+            <a href="mailto:perino.contact@gmail.com">
+                <Mail/>
+            </a>
         </div>
     </div>
-</div>
+</section>

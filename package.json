@@ -13,6 +13,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.0",
+    "simple-icons": "^15.22.0",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
