@@ -65,3 +65,12 @@
     font-style: normal;
     font-display: swap;
 }
+
+@layer utilities {
+    .hover-elevate {
+        @apply transition-transform duration-150 hover:bg-[#ececf3] active:bg-[#e1e0e7];
+    }
+    .active-elevate-2 {
+        @apply active:translate-y-0 active:shadow-md;
+    }
+}
