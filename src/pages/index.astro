@@ -5,11 +5,17 @@ import Cursus from "../components/Cursus.astro";
 import Project from "../components/Project.astro";
 import Contact from "../components/Contact.astro";
 import Stack from "../components/Stack.astro";
+import {
+    educationItems,
+    experienceItems
+} from "../data/timeline.ts";
 ---
 
 <Layout>
     <Hero/>
-    <!--<Cursus/>-->
+    <Cursus
+            educationItems={educationItems}
+            experienceItems={experienceItems}/>
     <!--<Project/>-->
     <Stack/>
     <Contact/>
