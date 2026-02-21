@@ -9,6 +9,7 @@ import {
     educationItems,
     experienceItems
 } from "../data/timeline.ts";
+import {projectItems} from "../data/projects.ts"
 ---
 
 <Layout>
@@ -16,7 +17,7 @@ import {
     <Cursus
             educationItems={educationItems}
             experienceItems={experienceItems}/>
-    <!--<Project/>-->
+    <Project projects={projectItems}/>
     <Stack/>
     <Contact/>
 </Layout>

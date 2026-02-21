@@ -1,12 +1,5 @@
 ---
-interface TimelineItem {
-    id: string;
-    period: string;
-    title: string;
-    organization: string;
-    description: string;
-}
-
+import type {TimelineItem} from "../data/timeline.ts";
 interface Props {
     educationItems: TimelineItem[];
     experienceItems: TimelineItem[];

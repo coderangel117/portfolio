@@ -1,11 +1,114 @@
 ---
+interface Props {
+    projects: Project[];
+}
+
+const {projects} = Astro.props as Props;
 ---
-<div class="">
-    <h1 id=""> Mes Réalisations</h1>
-    <div class="">
-        <div class="">
-            <div class="">
-            </div>
+
+<section class="py-12 md:py-24 relative overflow-hidden" data-testid="section-projects">
+    <!-- Gradient Background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background -z-10"></div>
+
+    <div class="max-w-6xl mx-auto px-4 md:px-6">
+
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent"
+                data-testid="heading-projects">
+                Réalisations
+            </h2>
+            <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Projets sélectionnés qui démontrent mes compétences en développement fullstack
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+                    <div
+                            class="group border border-border rounded-lg overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300"
+                            data-testid={`project-card-${index}`}
+                    >
+
+                        <!-- Image -->
+                        <div class="aspect-video w-full overflow-hidden bg-muted relative">
+                            <div class="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
+
+                            <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    data-testid={`img-project-${index}`}
+                            />
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-6">
+
+                            <div class="flex items-start justify-between mb-3 gap-2">
+                                <h3 class="text-xl md:text-2xl font-bold group-hover:text-primary transition-colors"
+                                    data-testid={`text-project-title-${index}`}>
+                                    {project.title}
+                                </h3>
+
+                                <div class="flex gap-2 flex-shrink-0">
+
+                                    {project.githubUrl && (
+                                            <a
+                                                    href={project.githubUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="w-9 h-9 flex items-center justify-center rounded-md border border-border hover:border-primary hover:bg-primary/10 transition-colors"
+                                                    data-testid={`link-github-${index}`}
+                                            >
+                                                <!-- Github SVG -->
+                                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <title>GitHub</title>
+                                                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                                                </svg>
+                                            </a>
+                                    )}
+
+                                    {project.demoUrl && (
+                                            <a
+                                                    href={project.demoUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    class="w-9 h-9 flex items-center justify-center rounded-md border border-border hover:border-primary hover:bg-primary/10 transition-colors"
+                                                    data-testid={`link-demo-${index}`}
+                                            >
+                                                <!-- External Link SVG -->
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                     stroke-width="2" class="w-5 h-5">
+                                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                                    <polyline points="15 3 21 3 21 9"/>
+                                                    <line x1="10" y1="14" x2="21" y2="3"/>
+                                                </svg>
+                                            </a>
+                                    )}
+
+                                </div>
+                            </div>
+
+                            <p class="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed"
+                               data-testid={`text-project-desc-${index}`}>
+                                {project.description}
+                            </p>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2">
+                                {project.technologies.map((tech, techIndex) => (
+                                        <span
+                                                class="text-xs font-mono border border-primary/20 bg-primary/5 hover:bg-primary/10 px-2 py-1 rounded-md"
+                                                data-testid={`badge-tech-${index}-${techIndex}`}
+                                        >
+                  {tech}
+                </span>
+                                ))}
+                            </div>
+
+                        </div>
+                    </div>
+            ))}
         </div>
     </div>
-</div>
+</section>
