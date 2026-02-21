@@ -1,10 +1,11 @@
 @import "tailwindcss";
+
 :root {
-    --button-outline: rgba(0,0,0, .10);
-    --badge-outline: rgba(0,0,0, .05);
+    --button-outline: rgba(0, 0, 0, .10);
+    --badge-outline: rgba(0, 0, 0, .05);
     --opaque-button-border-intensity: -8;
-    --elevate-1: rgba(0,0,0, .03);
-    --elevate-2: rgba(0,0,0, .08);
+    --elevate-1: rgba(0, 0, 0, .03);
+    --elevate-2: rgba(0, 0, 0, .08);
     --background: 0 0% 100%;
     --foreground: 0 0% 9%;
     --border: 0 0% 91%;
@@ -50,6 +51,10 @@
     --spacing: 0.25rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: "Jetbrains";
     src: url("/fonts/JetBrains/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
@@ -70,6 +75,7 @@
     .hover-elevate {
         @apply transition-transform duration-150 hover:bg-[#ececf3] active:bg-[#e1e0e7];
     }
+
     .active-elevate-2 {
         @apply active:translate-y-0 active:shadow-md;
     }
