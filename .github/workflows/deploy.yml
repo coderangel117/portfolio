@@ -19,11 +19,22 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Deploy via FTP
+      - name: Deploy to production
+        if: github.ref == 'refs/heads/master'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_DOMAIN }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist/
-          server-dir: ${{ github.ref == 'refs/heads/master' && 'public_html/portfolio/' || 'dev.gabrielperino.com/' }}
+          server-dir: public_html/portfolio/
+
+      - name: Deploy to dev
+        if: github.ref == 'refs/heads/develop'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_DOMAIN }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: dist/
+          server-dir: dev.gabrielperino.com/
