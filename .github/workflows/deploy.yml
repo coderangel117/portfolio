@@ -21,11 +21,28 @@ jobs:
 
       - name: Test secret exists
         run: |
+          if [ -z "${{ secrets.FTP_DOMAIN }}" ]; then
+            echo "FTP_DOMAIN is empty"
+            exit 1
+          else
+            echo "FTP_DOMAIN is set"
+          fi
+      - name: Test secret exists
+        run: |
           if [ -z "${{ secrets.FTP_USERNAME }}" ]; then
             echo "FTP_USERNAME is empty"
             exit 1
           else
             echo "FTP_USERNAME is set"
+          fi
+
+      - name: Test secret exists
+        run: |
+          if [ -z "${{ secrets.FTP_PASSWORD }}" ]; then
+            echo "FTP_PASSWORD is empty"
+            exit 1
+          else
+            echo "FTP_PASSWORD is set"
           fi
 
       - name: Deploy via FTP
