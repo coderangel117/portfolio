@@ -19,10 +19,14 @@ jobs:
       - name: Build Astro site
         run: npm run build
 
-      - name: Test secret 1
-        run: echo "FTP_DOMAIN is ${{ secrets.FTP_DOMAIN }}"
-      - name: Test secret 2
-        run: echo "FTP_USERNAME is ${{ secrets.FTP_USERNAME }}"
+      - name: Test secret exists
+        run: |
+          if [ -z "${{ secrets.FTP_USERNAME }}" ]; then
+            echo "FTP_USERNAME is empty"
+            exit 1
+          else
+            echo "FTP_USERNAME is set"
+          fi
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
