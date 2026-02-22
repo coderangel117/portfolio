@@ -5,7 +5,8 @@ import {ArrowDown, Download} from "@lucide/astro";
 
     <div class="absolute inset-0 bg-gradient-to-br from-[#0c56e9]/10 via-[#fff] to-[#9311d4]/10 -z-10"/>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.15),transparent_50%)] -z-10"/>
-    <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-150ms w-full bg-white/95 backdrop-blur">
+    <nav id="nav"
+         class="fixed top-0 left-0 right-0 z-50 transition-all duration-150ms w-full bg-white/95 backdrop-blur">
         <div class="max-w-6xl mx-auto px-4 md:px-6 py-4">
 
             <input type="checkbox" id="menu-toggle" class="hidden peer"/>
@@ -58,27 +59,28 @@ import {ArrowDown, Download} from "@lucide/astro";
                     Développeur Backend
                 </p>
                 <p class="text-base md:text-lg text-[#595e69] leading-relaxed max-w-xl mx-auto md:mx-0">
-                    Curieux et passionné par le développement.Stack principale : PHP, TypeScript, MariaDB, Python,
-                    VueJS.
+                    Curieux et passionné par le développement.
+                    <span class="block mt-1">
+                        Stack principale : PHP, TypeScript, MariaDB, Python, VueJS.
+                      </span>
                 </p>
 
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
                     <a href="#contact"
-                       class="px-6 py-3 bg-[#0c56e9] text-[#0c56e9]-[#171717] rounded-md font-medium hover-elevate active-elevate-2 transition-all"
-                    > Me contacter </a>
+                       class="px-6 py-3 bg-[#0c56e9] text-[#0c56e9]-[#171717] rounded-md font-medium hover-elevate active-elevate-2 transition-all">
+                        Me contacter </a>
                     <a
                             href="#project"
                             class="px-6 py-3 border border-border rounded-md font-medium hover-elevate active-elevate-2
-                            transition-all"
-                    > Voir mes projets </a>
+                            transition-all">
+                        Voir mes projets </a>
                     <a
                             href="/cv.pdf"
                             download
                             class="px-6 py-3 border border-[#0c56e9]/20 rounded-md font-medium hover-elevate
                             active-elevate-2 transition-all flex items-center gap-2"
                     >
-                        <Download class="w-4 h-4"
-                        />
+                        <Download class="w-4 h-4"/>
                         Télécharger mon CV </a>
                 </div>
             </div>
@@ -89,8 +91,7 @@ import {ArrowDown, Download} from "@lucide/astro";
                     <img
                             src="images/profile-picture.jpg"
                             alt="Profile"
-                            class="w-full h-full object-cover"
-                    />
+                            class="w-full h-full object-cover"/>
                 </div>
             </div>
         </div>
@@ -109,8 +110,6 @@ import {ArrowDown, Download} from "@lucide/astro";
 <script>
     const nav = document.getElementById('nav');
     document.addEventListener('scroll', function () {
-        console.log(nav);
-        console.log(window.scrollY);
         if (window.scrollY > 15) {
             nav?.classList.add('bg-white/95');
             nav?.classList.add('backdrop-blur');
