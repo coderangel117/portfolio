@@ -8,7 +8,7 @@ export interface Project {
     demoUrl?: string;
 }
 
-export const projectItems : Project[] = [
+export const projectItems: Project[] = [
     {
         id: "1",
         title: "Mini jeux console",

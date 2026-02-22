@@ -6,7 +6,7 @@ export interface TimelineItem {
     description: string;
 }
 
-export  const educationItems : TimelineItem[] = [
+export const educationItems: TimelineItem[] = [
     {
         id: "1",
         period: "2024 - 2025",
@@ -30,7 +30,7 @@ export  const educationItems : TimelineItem[] = [
     }
 ];
 
-export const experienceItems : TimelineItem[] = [
+export const experienceItems: TimelineItem[] = [
     {
         id: "1",
         period: "2024 - 2025",
