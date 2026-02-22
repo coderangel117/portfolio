@@ -3,7 +3,7 @@ name: Deploy Astro to o2switch
 on:
   push:
     branches:
-      - main
+      - master
       - develop
 
 jobs:
